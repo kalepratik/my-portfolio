@@ -76,7 +76,7 @@ class PortfolioConfig {
         if (locationEl) locationEl.textContent = personal.location;
         
         // Update profile image if exists
-        if (personal.profileImage && personal.profileImage !== 'images/profile.jpg') {
+        if (personal.profileImage) {
             const profileEl = document.querySelector('.hero-placeholder');
             if (profileEl) {
                 profileEl.innerHTML = `<img src="${personal.profileImage}" alt="${personal.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
