@@ -1,7 +1,7 @@
 {
-  "name": "your-name-portfolio",
+  "name": "pratik-portfolio",
   "version": "1.0.0",
-  "description": "A modern, responsive portfolio website inspired by PM Lens design",
+  "description": "Pratik Kumar Kale's Professional Portfolio",
   "main": "index.html",
   "scripts": {
     "start": "live-server --port=3000 --open=/",
@@ -18,17 +18,17 @@
     "css",
     "javascript"
   ],
-  "author": "Your Name",
+  "author": "Pratik Kumar Kale",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/your-portfolio-website.git"
+    "url": "https://github.com/kpratik64/portfolio-website.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/your-portfolio-website/issues"
+    "url": "https://github.com/kpratik64/portfolio-website/issues"
   },
-  "homepage": "https://yourusername.github.io/your-portfolio-website"
+  "homepage": "https://kpratik64.github.io/portfolio-website"
 }

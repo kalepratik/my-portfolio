@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratik Kumar Kale - Professional Portfolio</title>
+    <title>Pratik Kumar Kale - Lead Analytics Engineer</title>
+    <meta name="description" content="Lead Analytics Engineer specializing in data platforms, BI strategy, and cloud solutions on OCI and AWS.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-                         <div class="nav-logo">
-                 <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.name -->
-                 <h2>Pratik Kumar Kale</h2>
-             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
+            <a href="#home" class="nav-logo">
+                <h2>Pratik Kumar Kale</h2>
+            </a>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-social">
+                <a href="https://github.com/kpratik64" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pratik-kumar-kale/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
@@ -45,228 +46,302 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                                 <h1 class="hero-title">
-                     <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.name -->
-                     Hi, I'm <span class="highlight">Pratik Kumar Kale</span>
-                 </h1>
-                 <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.title -->
-                 <p class="hero-subtitle">
-                     Professional Developer & Creative Problem Solver
-                 </p>
-                 <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.description -->
-                 <p class="hero-description">
-                     I create innovative digital solutions that drive business growth and enhance user experiences.
-                 </p>
+                <div class="hero-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Architect track • Target: Director in 5 years</span>
+                </div>
+                <h1 class="hero-title">
+                    Lead Data Analytics Engineer | 
+                    <span class="highlight">BI & Data Strategy Specialist</span>
+                </h1>
+                <p class="hero-description">
+                    I design and ship analytics platforms that don't fall over on day two. Cloud-first. Governance-minded. Performance-obsessed. If it moves data, I make it reliable and measurable.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="/resume.pdf" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download résumé
+                    </a>
+                    <a href="mailto:kpratik64@gmail.com" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-arrow-up-right"></i> View projects
+                    </a>
+                </div>
+                <div class="hero-highlights">
+                    <div class="highlight-pill">
+                        <i class="fas fa-check-circle"></i>
+                        <strong>8+</strong> Years in Data
+                    </div>
+                    <div class="highlight-pill">
+                        <i class="fas fa-check-circle"></i>
+                        <strong>10+</strong> Cloud Projects
+                    </div>
+                    <div class="highlight-pill">
+                        <i class="fas fa-check-circle"></i>
+                        <strong>OCI · AWS · Azure</strong> Platforms
+                    </div>
                 </div>
             </div>
-                         <div class="hero-image">
-                 <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.profileImage -->
-                 <div class="hero-placeholder">
-                     <i class="fas fa-user-circle"></i>
-                 </div>
-             </div>
+            <div class="hero-card">
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <h3>Pratik Kumar Kale</h3>
+                        <p>Lead Data Analytics Engineer | BI & Data Strategy Specialist</p>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana, India
+                        </p>
+                    </div>
+                    <div class="profile-avatar">
+                        <img src="images/profile.jpg" alt="Pratik Kumar Kale" class="profile-image">
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Pipeline Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">₹↓</div>
+                        <div class="stat-label">Cost Optimized</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">T+1</div>
+                        <div class="stat-label">SLA Refresh</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <h2>About</h2>
+                <p class="section-intro">Big on architecture thinking, small on chaos.</p>
+            </div>
             <div class="about-content">
-                <div class="about-text">
-                                         <!-- DYNAMIC: Updated by config-loader.js from config.json > about.story -->
-                     <p class="about-description">
-                         I'm a passionate professional with expertise in creating digital solutions that make a difference. 
-                         With years of experience in development and design, I help businesses achieve their goals through 
-                         innovative technology and creative thinking.
-                     </p>
-                     <!-- DYNAMIC: Updated by config-loader.js from config.json > about.approach -->
-                     <p class="about-approach">
-                         My approach combines technical excellence with strategic thinking, ensuring that every project 
-                         not only looks great but also delivers measurable results.
-                     </p>
-                                         <div class="skills">
-                         <h3>Skills & Expertise</h3>
-                         <!-- DYNAMIC: Updated by config-loader.js from config.json > about.skills array -->
-                         <ul class="skills-list">
-                             <li>Web Development</li>
-                             <li>UI/UX Design</li>
-                             <li>Project Management</li>
-                             <li>Digital Strategy</li>
-                             <li>Consulting</li>
-                         </ul>
-                     </div>
-                </div>
-                                 <!-- DYNAMIC: Updated by config-loader.js from config.json > about.stats -->
-                 <div class="about-stats">
-                     <div class="stat-item">
-                         <!-- DYNAMIC: Updated by config-loader.js from config.json > about.stats.projects -->
-                         <h3 class="stat-number">10+</h3>
-                         <p>Projects Completed</p>
-                     </div>
-                     <div class="stat-item">
-                         <!-- DYNAMIC: Updated by config-loader.js from config.json > about.stats.experience -->
-                         <h3 class="stat-number">5+</h3>
-                         <p>Years Experience</p>
-                     </div>
-                     <div class="stat-item">
-                         <!-- DYNAMIC: Updated by config-loader.js from config.json > about.stats.satisfaction -->
-                         <h3 class="stat-number">100%</h3>
-                         <p>Client Satisfaction</p>
-                     </div>
-                 </div>
+                <p>I build analytics systems end to end: ingestion, modeling, governance, and the last mile with BI. I enjoy fixing flaky refreshes, making dashboards fast, and documenting just enough so teams stop guessing.</p>
+                <p>Current focus: scalable data contracts on OCI, pragmatic RAG for analytics help, and clean handoffs between engineering and analysts.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Experience Section -->
+    <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Services I Offer</h2>
-                         <!-- DYNAMIC: Updated by config-loader.js from config.json > services array -->
-             <div class="services-grid">
-                 <div class="service-card">
-                     <div class="service-icon">
-                         <i class="fas fa-code"></i>
-                     </div>
-                     <h3>Web Development</h3>
-                     <p>Custom websites and web applications built with modern technologies and best practices.</p>
-                 </div>
-                 <div class="service-card">
-                     <div class="service-icon">
-                         <i class="fas fa-palette"></i>
-                     </div>
-                     <h3>UI/UX Design</h3>
-                     <p>User-centered design solutions that create engaging and intuitive user experiences.</p>
-                 </div>
-                 <div class="service-card">
-                     <div class="service-icon">
-                         <i class="fas fa-chart-line"></i>
-                     </div>
-                     <h3>Digital Strategy</h3>
-                     <p>Strategic planning and consulting to help your business thrive in the digital landscape.</p>
-                 </div>
-                 <div class="service-card">
-                     <div class="service-icon">
-                         <i class="fas fa-mobile-alt"></i>
-                     </div>
-                     <h3>Mobile Development</h3>
-                     <p>Native and cross-platform mobile applications for iOS and Android platforms.</p>
-                 </div>
-             </div>
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p class="section-intro">Selected roles and engagements.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Lead Data Analytics Engineer</h3>
+                                <p>ITechVersity Solutions Pvt Ltd</p>
+                            </div>
+                            <span class="period">2022 — Present</span>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Solution design for data platforms on OCI and AWS</li>
+                            <li>Owner for BI strategy using Power BI and OAS</li>
+                            <li>Mentored engineers; paved roadmap toward architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Data Engineering Consultant</h3>
+                                <p>INFOLOB (Engagement)</p>
+                            </div>
+                            <span class="period">2024</span>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Migrated data lake from AWS to OCI; stabilized pipelines</li>
+                            <li>Optimized ADW connectivity and governed cost baselines</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>BI & DW Consultant</h3>
+                                <p>Clovertex (Engagement)</p>
+                            </div>
+                            <span class="period">2025</span>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>DW on OCI with Tableau; GxP-minded delivery approach</li>
+                            <li>Set up ingestion standards and data contracts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Work</h2>
-                         <!-- DYNAMIC: Updated by config-loader.js from config.json > portfolio array -->
-             <div class="portfolio-grid">
-                 <div class="portfolio-item">
-                     <div class="portfolio-image">
-                         <div class="portfolio-placeholder">
-                             <i class="fas fa-image"></i>
-                         </div>
-                     </div>
-                     <div class="portfolio-content">
-                         <h3>E-Commerce Platform</h3>
-                         <p>A modern e-commerce solution with advanced features and seamless user experience.</p>
-                         <div class="portfolio-tags">
-                             <span class="tag">React</span>
-                             <span class="tag">Node.js</span>
-                             <span class="tag">MongoDB</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="portfolio-item">
-                     <div class="portfolio-image">
-                         <div class="portfolio-placeholder">
-                             <i class="fas fa-image"></i>
-                         </div>
-                     </div>
-                     <div class="portfolio-content">
-                         <h3>Corporate Website</h3>
-                         <p>Professional corporate website with modern design and excellent performance.</p>
-                         <div class="portfolio-tags">
-                             <span class="tag">HTML/CSS</span>
-                             <span class="tag">JavaScript</span>
-                             <span class="tag">WordPress</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="portfolio-item">
-                     <div class="portfolio-image">
-                         <div class="portfolio-placeholder">
-                             <i class="fas fa-image"></i>
-                         </div>
-                     </div>
-                     <div class="portfolio-content">
-                         <h3>Mobile App</h3>
-                         <p>Cross-platform mobile application with native performance and modern UI.</p>
-                         <div class="portfolio-tags">
-                             <span class="tag">React Native</span>
-                             <span class="tag">Firebase</span>
-                             <span class="tag">Redux</span>
-                         </div>
-                     </div>
-                 </div>
-             </div>
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p class="section-intro">A few that show depth across data, BI, and cloud.</p>
+            </div>
+            <div class="projects-filters">
+                <div class="search-box">
+                    <i class="fas fa-filter"></i>
+                    <input type="text" id="projectSearch" placeholder="Search projects...">
+                </div>
+                <select id="tagFilter">
+                    <option value="">All tags</option>
+                    <option value="OCI">OCI</option>
+                    <option value="AWS">AWS</option>
+                    <option value="OAS">OAS</option>
+                    <option value="RAG">RAG</option>
+                    <option value="Django">Django</option>
+                    <option value="React">React</option>
+                </select>
+                <button id="resetFilters" class="btn-reset">
+                    <i class="fas fa-times"></i> Reset
+                </button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <p class="section-intro">Breadth across the stack. Depth where it matters.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Cloud & Infra</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="bullet"></span>Oracle Cloud (OCI)</li>
+                        <li><span class="bullet"></span>AWS</li>
+                        <li><span class="bullet"></span>Azure</li>
+                        <li><span class="bullet"></span>Linux</li>
+                        <li><span class="bullet"></span>Docker</li>
+                        <li><span class="bullet"></span>VPC/VCN</li>
+                        <li><span class="bullet"></span>IAM</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Data & ETL</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="bullet"></span>SQL</li>
+                        <li><span class="bullet"></span>Python</li>
+                        <li><span class="bullet"></span>Spark</li>
+                        <li><span class="bullet"></span>ODI</li>
+                        <li><span class="bullet"></span>OCI Data Integration</li>
+                        <li><span class="bullet"></span>ADF</li>
+                        <li><span class="bullet"></span>dbt</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analytics & BI</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="bullet"></span>Power BI</li>
+                        <li><span class="bullet"></span>Tableau</li>
+                        <li><span class="bullet"></span>OAS/OBIEE</li>
+                        <li><span class="bullet"></span>Oracle ADW</li>
+                        <li><span class="bullet"></span>RAG (PoC)</li>
+                        <li><span class="bullet"></span>DAX</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Apps & Dev</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="bullet"></span>Django</li>
+                        <li><span class="bullet"></span>FastAPI</li>
+                        <li><span class="bullet"></span>React</li>
+                        <li><span class="bullet"></span>REST APIs</li>
+                        <li><span class="bullet"></span>Git</li>
+                        <li><span class="bullet"></span>CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certs" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Certifications</h2>
+                <p class="section-intro">Selected and in-progress.</p>
+            </div>
+            <div class="certifications">
+                <div class="cert-pill">Oracle Cloud Foundations (target)</div>
+                <div class="cert-pill">Microsoft Certified: Data Analyst Associate (Power BI)</div>
+                <div class="cert-pill">AWS Solutions Architect (target)</div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                                         <h3>Let's Work Together</h3>
-                     <!-- DYNAMIC: Updated by config-loader.js from config.json > contact.message -->
-                     <p class="contact-message">Ready to start your next project? I'd love to hear from you and discuss how we can bring your ideas to life.</p>
-                    <div class="contact-details">
-                                                 <div class="contact-item">
-                             <i class="fas fa-envelope"></i>
-                             <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.email -->
-                             <span class="contact-email">kpratik64@gmail.com</span>
-                         </div>
-                         <div class="contact-item">
-                             <i class="fas fa-phone"></i>
-                             <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.phone -->
-                             <span class="contact-phone">+91 8919052874</span>
-                         </div>
-                         <div class="contact-item">
-                             <i class="fas fa-map-marker-alt"></i>
-                             <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.location -->
-                             <span class="contact-location">Hyderabad, Telangana, India</span>
-                         </div>
-                    </div>
-                                         <!-- DYNAMIC: Updated by config-loader.js from config.json > social object -->
-                     <div class="social-links">
-                         <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                     </div>
+            <div class="section-header">
+                <h2>Contact</h2>
+                <p class="section-intro">Low-friction ways to reach out.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-label">Email</div>
+                    <a href="mailto:kpratik64@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> kpratik64@gmail.com
+                    </a>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <div class="contact-card">
+                    <div class="contact-label">Phone</div>
+                    <a href="tel:+91-8919052874" class="contact-link">
+                        <i class="fas fa-phone"></i> +91-8919052874
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-label">Profiles</div>
+                    <div class="contact-profiles">
+                        <a href="https://github.com/kpratik64" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/pratik-kumar-kale/" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -275,34 +350,14 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                                 <div class="footer-section">
-                     <!-- DYNAMIC: Updated by config-loader.js from config.json > personal.name -->
-                     <h3 class="footer-name">Pratik Kumar Kale</h3>
-                     <!-- DYNAMIC: Updated by config-loader.js from config.json > footer.tagline -->
-                     <p class="footer-tagline">Creating digital solutions that make a difference.</p>
-                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>kpratik64@gmail.com</p>
-                    <p>+91 8919052874</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
                 <p>&copy; 2024 Pratik Kumar Kale. All rights reserved.</p>
+                <a href="#home" class="back-to-top">
+                    Back to top <i class="fas fa-arrow-up-right"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="config-loader.js"></script>
 </body>
 </html>
