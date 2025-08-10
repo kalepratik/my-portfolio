@@ -1,0 +1,87 @@
+{
+  "personal": {
+    "name": "Pratik Kumar Kale",
+    "title": "Lead Data Analytics Engineer | BI & Data Strategy Specialist",
+    "description": "I help businesses make smarter, data-driven decisions by transforming complex data into actionable insights using modern BI tools and cloud technologies.",
+    "email": "pratik.kale@itversity.com",
+    "phone": "+91 8919052874",
+    "location": "Hyderabad, Telangana, India",
+    "profileImage": "images/profile.jpg"
+  },
+  "about": {
+    "story": "With over 8 years of experience spanning analytics engineering, business intelligence, and sales leadership, I specialize in creating impactful digital and data solutions that enable better decision-making. My journey from sales to data analytics has equipped me with both business acumen and technical expertise, making me adept at bridging the gap between strategy and execution.",
+    "approach": "I combine technical excellence in BI development with a strategic business mindset. Whether it's architecting semantic models, optimizing performance, or crafting dashboards that tell a story, I focus on delivering measurable value for every project.",
+    "skills": [
+      "Power BI Development",
+      "Data Build Tool (dbt)",
+      "SQL & Data Validation",
+      "Cloud Platforms (AWS, Azure, OCI)",
+      "Data Visualization & Storytelling",
+      "ETL & Data Integration",
+      "Project Management"
+    ],
+    "stats": {
+      "projects": 50,
+      "experience": 8,
+      "satisfaction": 100
+    }
+  },
+  "services": [
+    {
+      "title": "Business Intelligence Development",
+      "description": "Designing and delivering interactive dashboards and semantic models using Power BI, Tableau, and OAC to provide actionable insights.",
+      "icon": "fas fa-chart-pie"
+    },
+    {
+      "title": "Data Strategy & Architecture", 
+      "description": "Crafting scalable BI and analytics solutions with robust data models, governance, and integration with cloud ecosystems.",
+      "icon": "fas fa-project-diagram"
+    },
+    {
+      "title": "Cloud Data Solutions",
+      "description": "Leveraging AWS, Azure, and OCI for data warehousing, integration, and analytics to drive digital transformation.",
+      "icon": "fas fa-cloud"
+    },
+    {
+      "title": "Mentoring & Enablement",
+      "description": "Guiding teams and individuals in SQL, BI SDLC, data storytelling, and analytics best practices to build organizational capability.",
+      "icon": "fas fa-user-graduate"
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Enterprise BI Modernization",
+      "description": "Migrated Datalake from AWS Cloudera to Oracle ADW, integrating with Power BI and ensuring data accuracy through extensive SQL validation.",
+      "image": "images/project1.jpg",
+      "technologies": ["Power BI", "Oracle ADW", "AWS", "SQL"],
+      "link": "#"
+    },
+    {
+      "title": "Performance Optimization Initiative",
+      "description": "Optimized Power BI datasets and report load times by adopting native connectors and fine-tuning refresh processes, improving efficiency significantly.",
+      "image": "images/project2.jpg", 
+      "technologies": ["Power BI", "Azure", "SQL Server"],
+      "link": "#"
+    },
+    {
+      "title": "Cross-Team Enablement Program",
+      "description": "Led training sessions on BI storytelling, SQL, and analytics best practices, upskilling junior engineers and improving team productivity.",
+      "image": "images/project3.jpg",
+      "technologies": ["Power BI", "SQL", "Mentoring"],
+      "link": "#"
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/pratik-kumar-kale",
+    "github": "#",
+    "twitter": "#",
+    "instagram": "#"
+  },
+  "contact": {
+    "message": "Looking to transform your business data into decisions? Let's connect and explore how I can help bring your analytics vision to life.",
+    "formAction": "#"
+  },
+  "footer": {
+    "tagline": "Turning data into decisions, one insight at a time."
+  }
+}
