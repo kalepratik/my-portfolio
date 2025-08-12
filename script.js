@@ -4,37 +4,43 @@ const projects = [
     title: "AWS → OCI Data Lake Migration",
     summary: "Cross-cloud move with staged cutover, object storage tiering, and ADW federation. Reduced monthly spend and improved refresh SLAs.",
     tags: ["OCI", "AWS", "ADW", "Object Storage", "Data Lake"],
-    links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }],
+    icon: 'fas fa-cloud'
   },
   {
     title: "ITVCMS Platform",
     summary: "Training ops platform with auth, mentor mapping, and integrations for Udemy and YouTube metadata.",
     tags: ["Django", "React", "Postgres", "OAuth2"],
-    links: [{ href: "https://github.com/kpratik64", label: "Repo" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Repo" }],
+    icon: 'fas fa-laptop-code'
   },
   {
     title: "Oracle Analytics Server on OCI",
     summary: "Provisioned OAS with hardened networking. Automated deploys, RCU setup, and catalog migration.",
     tags: ["OAS", "OBIEE", "RCU", "Linux"],
-    links: [{ href: "https://github.com/kpratik64", label: "Runbook" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Runbook" }],
+    icon: 'fas fa-chart-line'
   },
   {
     title: "RAG Chatbot PoC on OCI",
     summary: "Multi-lingual retrieval with vector search, prompt safety, and observability hooks.",
     tags: ["RAG", "Vector DB", "LLM", "OCI"],
-    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
+    icon: 'fas fa-robot'
   },
   {
     title: "Google Workspace Automations",
     summary: "Apps Script workflows for lead routing, calendar sync, and doc templating.",
     tags: ["Apps Script", "Sheets", "Gmail", "Calendar"],
-    links: [{ href: "https://github.com/kpratik64", label: "Samples" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Samples" }],
+    icon: 'fas fa-gears'
   },
   {
     title: "Odoo Partner Utilities",
     summary: "Internal tools for discovery, scope mapping, and implementation estimates.",
     tags: ["Odoo", "ETL", "Analytics"],
-    links: [{ href: "https://github.com/kpratik64", label: "Toolkit" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Toolkit" }],
+    icon: 'fas fa-toolbox'
   }
 ];
 
@@ -46,6 +52,76 @@ const resetFilters = document.getElementById('resetFilters');
 const projectsGrid = document.getElementById('projectsGrid');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+
+// Config Loader
+async function loadSiteConfig() {
+  try {
+    const response = await fetch('config.json', { cache: 'no-store' });
+    const cfg = await response.json();
+    applyConfig(cfg);
+  } catch (err) {
+    console.error('Failed to load config.json', err);
+  }
+}
+
+function applyConfig(cfg) {
+  if (!cfg) return;
+
+  // Document title (optional short tab title)
+  if (cfg.hero && cfg.hero.tabTitle) {
+    document.title = cfg.hero.tabTitle;
+  }
+
+  // Hero title (two lines)
+  if (cfg.hero && cfg.hero.line1 && cfg.hero.line2) {
+    const heroTitleEl = document.querySelector('.hero-title');
+    if (heroTitleEl) {
+      heroTitleEl.innerHTML = `${cfg.hero.line1}<br/><span class="highlight">${cfg.hero.line2}</span>`;
+    }
+  }
+
+  // Hero description
+  if (cfg.personal && cfg.personal.description) {
+    const heroDesc = document.querySelector('.hero-description');
+    if (heroDesc) heroDesc.textContent = cfg.personal.description;
+  }
+
+  // Profile card
+  if (cfg.personal) {
+    const nameEl = document.querySelector('.profile-info h3');
+    if (nameEl && cfg.personal.name) nameEl.textContent = cfg.personal.name;
+
+    const subtitleEl = document.querySelector('.profile-info p:not(.location)');
+    if (subtitleEl && cfg.personal.title) subtitleEl.textContent = cfg.personal.title;
+
+    const locEl = document.querySelector('.profile-info .location');
+    if (locEl && cfg.personal.location) {
+      // Keep icon and only update text
+      const icon = locEl.querySelector('i');
+      locEl.textContent = ` ${cfg.personal.location}`;
+      if (icon) locEl.prepend(icon);
+    }
+
+    const avatarImg = document.querySelector('.profile-avatar .profile-image');
+    if (avatarImg && cfg.personal.profileImage) {
+      avatarImg.src = cfg.personal.profileImage;
+      avatarImg.alt = cfg.personal.name || 'Profile';
+    }
+  }
+
+  // About section
+  if (cfg.about) {
+    const aboutParas = document.querySelectorAll('#about .about-content p');
+    if (aboutParas.length >= 1 && cfg.about.story) {
+      aboutParas[0].textContent = cfg.about.story;
+    }
+    if (aboutParas.length >= 2 && cfg.about.approach) {
+      aboutParas[1].textContent = cfg.about.approach;
+    }
+    const introEl = document.querySelector('#about .section-intro');
+    if (introEl && cfg.about.intro) introEl.textContent = cfg.about.intro;
+  }
+}
 
 // Theme Management
 function initTheme() {
@@ -77,7 +153,7 @@ function renderProjects(filteredProjects = projects) {
           <h3 class="project-title">${project.title}</h3>
           <p class="project-summary">${project.summary}</p>
         </div>
-        <div class="project-icon"></div>
+        <div class="project-icon">${project.icon ? `<i class="${project.icon}"></i>` : '<i class="fas fa-folder"></i>'}</div>
       </div>
       <div class="project-tags">
         ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
@@ -174,6 +250,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Render initial projects
   renderProjects();
+  // Sync reset button visibility on first load
+  filterProjects();
+
+  // Load site configuration and apply dynamic content
+  loadSiteConfig();
   
   // Initialize smooth scrolling
   initSmoothScrolling();
