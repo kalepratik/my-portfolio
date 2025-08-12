@@ -2,16 +2,16 @@
   "personal": {
     "name": "Pratik Kumar Kale",
     "title": "AI Solutions Engineer | Strategy - Data & Analytics",
-    "description": "I help teams ship AI‑driven analytics — reliable platforms, governed data, fast insights.",
+    "description": "I collaborate, coach, and guide teams across the org to ship AI‑driven analytics — reliable platforms, governed data, fast insights.",
     "email": "kpratik64@gmail.com",
     "phone": "+91 8919052874",
     "location": "Hyderabad, Telangana, India",
     "profileImage": "images/profile.jpg"
   },
   "about": {
-    "intro": "AI‑driven data & analytics for teams — practical guardrails, measurable outcomes, hands‑on delivery.",
-    "story": "I partner with teams to design and ship ingestion → models → semantic layers, with selective LLM/RAG. I translate goals into platform choices and operating standards, and contribute where impact is highest.",
-    "approach": "Balanced leadership: align on outcomes; co‑create light standards (data contracts, metrics layer, cost/perf guardrails); build refs; pair and review; coach; document the essentials; hand off cleanly. Cloud: OCI, AWS, Azure.",
+    "intro": "Org‑wide data & analytics — I collaborate, coach, and guide teams with practical guardrails, measurable outcomes, and hands‑on delivery.",
+    "story": "I partner across product, data, and analytics teams to design and ship ingestion → models → semantic layers, with selective LLM/RAG. I translate goals into platform choices and operating standards, and contribute where impact is highest.",
+    "approach": "Balanced leadership, org‑wide: align on outcomes; co‑create light standards (data contracts, metrics layer, cost/perf guardrails); build refs; pair and review; coach; document the essentials; hand off cleanly. Cloud: OCI, AWS, Azure.",
     "skills": [
       "AI/RAG Patterns",
       "Semantic Layers & Metrics",
