@@ -252,6 +252,9 @@ document.addEventListener('DOMContentLoaded', function() {
   renderProjects();
   // Sync reset button visibility on first load
   filterProjects();
+
+  // Load site configuration and apply dynamic content
+  loadSiteConfig();
   
   // Initialize smooth scrolling
   initSmoothScrolling();
