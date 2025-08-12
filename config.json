@@ -2,16 +2,16 @@
   "personal": {
     "name": "Pratik Kumar Kale",
     "title": "AI Solutions Engineer | Strategy - Data & Analytics",
-    "description": "I help teams ship AI‑driven analytics — reliable platforms, governed data, fast insights.",
+    "description": "With teams, I build AI‑enabled decision systems — secure, observable, useful.",
     "email": "kpratik64@gmail.com",
     "phone": "+91 8919052874",
     "location": "Hyderabad, Telangana, India",
     "profileImage": "images/profile.jpg"
   },
   "about": {
-    "intro": "AI & analytics for teams — practical, measurable, shipped.",
-    "story": "I partner across product, data, and analytics teams to design and ship ingestion → models → semantic layers, with selective LLM/RAG. I translate goals into platform choices and operating standards, and contribute where impact is highest.",
-    "approach": "Balanced leadership, org‑wide: align on outcomes; co‑create light standards (data contracts, metrics layer, cost/perf guardrails); build refs; pair and review; coach; document the essentials; hand off cleanly. Cloud: OCI, AWS, Azure.",
+    "intro": "Better decisions at scale — AI + data, human teams in the loop.",
+    "story": "Translate goals into platform choices and operating standards; contribute where impact is highest.",
+    "approach": "Outcomes first, lean standards, reference builds, coaching and reviews, maintainable handovers.",
     "skills": [
       "AI/RAG Patterns",
       "Semantic Layers & Metrics",
