@@ -1,0 +1,48 @@
+name: Build Resume (MD -> HTML -> PDF)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'resume/resume.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Convert MD -> HTML
+        working-directory: resume
+        run: |
+          pandoc resume.md -s -o resume.html --metadata title="Pratik Kumar Kale - Resume"
+
+      - name: Install wkhtmltopdf
+        run: sudo apt-get install -y wkhtmltopdf
+
+      - name: Convert HTML -> PDF
+        working-directory: resume
+        run: |
+          wkhtmltopdf --enable-local-file-access resume.html resume.pdf
+
+      - name: Commit outputs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(resume): build html and pdf from markdown"
+          file_pattern: resume/resume.html resume/resume.pdf
+
+

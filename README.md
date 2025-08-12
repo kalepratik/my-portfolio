@@ -157,9 +157,9 @@ If you need help customizing or deploying your website, feel free to reach out!
 
 When updating the resume, follow this order to keep artifacts in sync:
 
-1. Edit the source Markdown (`resume.md`) or structured content.
+1. Edit the source Markdown (`resume/resume.md`).
 2. Build the HTML (`resume/resume.html`).
-3. Convert HTML to PDF (`resume/resume.pdf`). You can use the helper script `resume/auto_convert_simple.py` or your preferred tool.
-4. Verify formatting, then commit and push the changes to the repo.
+3. Convert HTML to PDF (`resume/resume.pdf`). You can use the helper script `resume/auto_convert_simple.py` or trigger the GitHub Action “Build Resume (MD -> HTML -> PDF)”.
+4. Verify formatting, then commit and push the changes to the repo (the Action can auto‑commit outputs).
 
 Only push after PDF is regenerated, so the website and downloadable file match.
