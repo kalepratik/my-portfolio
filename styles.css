@@ -147,7 +147,7 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  padding: 4rem 0 6rem;
+  padding: 3.5rem 0 3rem;
 }
 
 .hero::before {
@@ -361,7 +361,7 @@ body {
 
 /* Sections */
 .section {
-  padding: 4rem 0;
+  padding: 3rem 0;
   scroll-margin-top: 6rem;
 }
 
@@ -369,7 +369,7 @@ body {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-header h2 {
@@ -886,7 +886,7 @@ body {
   }
   
   .section {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
   
   .skills-grid {
