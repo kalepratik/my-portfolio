@@ -180,6 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Render initial projects
   renderProjects();
+  // Sync reset button visibility on first load
+  filterProjects();
   
   // Initialize smooth scrolling
   initSmoothScrolling();

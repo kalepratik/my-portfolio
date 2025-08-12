@@ -547,6 +547,9 @@ body {
   background: rgb(var(--muted));
 }
 
+/* Hide reset by default; JS will show it when filters are active */
+.btn-reset { display: none; }
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
