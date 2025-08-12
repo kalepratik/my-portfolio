@@ -2,16 +2,16 @@
   "personal": {
     "name": "Pratik Kumar Kale",
     "title": "AI Solutions Engineer | Strategy - Data & Analytics",
-    "description": "I help product, data, and analytics teams deliver AI‑powered outcomes — reliable platforms, governed data, and fast, useful insights. I set clear standards, remove friction, and stay hands‑on when it matters (prototyping RAG, shaping SQL models, performance debugging).",
+    "description": "I help teams ship AI‑driven analytics — reliable platforms, governed data, fast insights.",
     "email": "kpratik64@gmail.com",
     "phone": "+91 8919052874",
     "location": "Hyderabad, Telangana, India",
     "profileImage": "images/profile.jpg"
   },
   "about": {
-    "intro": "AI‑led data and analytics strategy that enables teams to move faster — with practical guardrails, measurable outcomes, and sleeves‑rolled‑up execution.",
-    "story": "I work with teams to design and ship end‑to‑end data and analytics solutions: ingestion, modeling, semantic layers, and selective LLM/RAG. I translate business goals into platform choices and operating standards — and I contribute directly where impact is highest (reference implementations, reviews, and performance fixes).",
-    "approach": "Balanced leadership: clarify outcomes and KPIs; co‑create lightweight standards (data contracts, metrics/semantic layer, cost/perf guardrails); build reference patterns; pair‑program and review; coach analysts and engineers; document the essentials; hand over maintainable systems. Cloud: OCI, AWS, Azure.",
+    "intro": "AI‑driven data & analytics for teams — practical guardrails, measurable outcomes, hands‑on delivery.",
+    "story": "I partner with teams to design and ship ingestion → models → semantic layers, with selective LLM/RAG. I translate goals into platform choices and operating standards, and contribute where impact is highest.",
+    "approach": "Balanced leadership: align on outcomes; co‑create light standards (data contracts, metrics layer, cost/perf guardrails); build refs; pair and review; coach; document the essentials; hand off cleanly. Cloud: OCI, AWS, Azure.",
     "skills": [
       "AI/RAG Patterns",
       "Semantic Layers & Metrics",
