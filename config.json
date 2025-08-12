@@ -9,7 +9,7 @@
     "profileImage": "images/profile.jpg"
   },
   "about": {
-    "intro": "Org‑wide data & analytics — I collaborate, coach, and guide teams with practical guardrails, measurable outcomes, and hands‑on delivery.",
+    "intro": "AI & analytics for teams — practical, measurable, shipped.",
     "story": "I partner across product, data, and analytics teams to design and ship ingestion → models → semantic layers, with selective LLM/RAG. I translate goals into platform choices and operating standards, and contribute where impact is highest.",
     "approach": "Balanced leadership, org‑wide: align on outcomes; co‑create light standards (data contracts, metrics layer, cost/perf guardrails); build refs; pair and review; coach; document the essentials; hand off cleanly. Cloud: OCI, AWS, Azure.",
     "skills": [
