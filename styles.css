@@ -36,9 +36,9 @@ body {
 }
 
 .container {
-  width: 98vw;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-inline: clamp(1rem, 4vw, 3rem);
 }
 
 /* Navigation */
@@ -52,9 +52,9 @@ body {
 }
 
 .nav-container {
-  width: 98vw;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-inline: clamp(1rem, 4vw, 3rem);
   height: 4rem;
   display: flex;
   align-items: center;
@@ -159,9 +159,9 @@ body {
 }
 
 .hero-container {
-  width: 98vw;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-inline: clamp(1rem, 4vw, 3rem);
   display: flex;
   flex-direction: column-reverse;
   gap: 2.5rem;
