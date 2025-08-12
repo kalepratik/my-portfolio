@@ -13,15 +13,15 @@ Your portfolio website is ready to deploy! Here are the easiest ways to get it l
 
 ## Option 2: GitHub Pages (Free)
 
-1. **Create a GitHub repository** named `your-portfolio-website`
+1. **Create a GitHub repository** named `my-portfolio`
 2. **Push your code** to GitHub:
    ```bash
-   git remote add origin https://github.com/yourusername/your-portfolio-website.git
+   git remote add origin https://github.com/yourusername/my-portfolio.git
    git push -u origin master
    ```
 3. **Go to repository Settings > Pages**
 4. **Select source branch** (master/main)
-5. **Your site will be live** at `https://yourusername.github.io/your-portfolio-website`
+5. **Your site will be live** at `https://yourusername.github.io/my-portfolio/`
 
 ## Option 3: Vercel (Alternative)
 

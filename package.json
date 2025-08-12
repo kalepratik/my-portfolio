@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kpratik64/portfolio-website.git"
+    "url": "https://github.com/kpratik64/my-portfolio.git"
   },
   "bugs": {
-    "url": "https://github.com/kpratik64/portfolio-website/issues"
+    "url": "https://github.com/kpratik64/my-portfolio/issues"
   },
-  "homepage": "https://kpratik64.github.io/portfolio-website"
+  "homepage": "https://kpratik64.github.io/my-portfolio/"
 }

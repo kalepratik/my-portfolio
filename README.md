@@ -1,6 +1,6 @@
-# Your Name - Professional Portfolio Website
+# Pratik Kumar Kale - Professional Portfolio Website
 
-A modern, responsive portfolio website inspired by PM Lens design. Built with HTML5, CSS3, and vanilla JavaScript.
+A modern, responsive portfolio website. Live: https://kpratik64.github.io/my-portfolio/
 
 ## 🚀 Features
 
