@@ -195,7 +195,7 @@ body {
 }
 
 .hero-title .highlight {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .highlight {
@@ -851,6 +851,10 @@ body {
   
   .hero-title {
     font-size: 3rem;
+  }
+  /* Keep second line on a single line on desktop */
+  .hero-title .highlight {
+    white-space: nowrap;
   }
   
   .hero-description {
