@@ -416,6 +416,7 @@ body {
   justify-content: center;
   font-size: 0.75rem;
   color: rgb(var(--muted-foreground));
+  z-index: 2; /* ensure marker sits above the card */
 }
 
 .timeline-content {
@@ -427,6 +428,7 @@ body {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
   transition: box-shadow 0.2s ease;
   position: relative;
+  z-index: 1;
 }
 
 .timeline-content:hover {
