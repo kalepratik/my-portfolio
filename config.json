@@ -1,30 +1,36 @@
 {
   "personal": {
     "name": "Pratik Kumar Kale",
-    "title": "Lead Data Analytics Engineer | BI & Data Strategy Specialist",
-    "description": "I help businesses make smarter, data-driven decisions by transforming complex data into actionable insights using modern BI tools and cloud technologies.",
+    "title": "AI Solutions Engineer | Strategy - Data & Analytics",
+    "description": "I design and ship AI-powered data and analytics solutions with measurable outcomes — reliable platforms, governed data, and fast insights.",
     "email": "kpratik64@gmail.com",
     "phone": "+91 8919052874",
     "location": "Hyderabad, Telangana, India",
     "profileImage": "images/profile.jpg"
   },
   "about": {
-    "story": "With over 8 years of experience spanning analytics engineering, business intelligence, and sales leadership, I specialize in creating impactful digital and data solutions that enable better decision-making. My journey from sales to data analytics has equipped me with both business acumen and technical expertise, making me adept at bridging the gap between strategy and execution.",
-    "approach": "I combine technical excellence in BI development with a strategic business mindset. Whether it's architecting semantic models, optimizing performance, or crafting dashboards that tell a story, I focus on delivering measurable value for every project.",
+    "intro": "AI-led data and analytics strategy, delivered with reliable engineering.",
+    "story": "I design and ship AI-powered data and analytics solutions end to end: ingestion, modeling, semantic layers, and LLM/RAG where it helps — connecting business outcomes to platform choices so solutions are measurable, governable, and fast.",
+    "approach": "Focus areas: Strategy — Data & Analytics, RAG patterns and prompt safety, performance tuning and cost governance, metric/semantic layers, and clean handoffs between engineering and analysts across OCI, AWS, and Azure.",
     "skills": [
-      "Power BI Development",
-      "Data Build Tool (dbt)",
-      "SQL & Data Validation",
-      "Cloud Platforms (AWS, Azure, OCI)",
-      "Data Visualization & Storytelling",
+      "AI/RAG Patterns",
+      "Semantic Layers & Metrics",
+      "Power BI / Tableau",
+      "SQL & Data Modeling",
+      "Cloud (OCI, AWS, Azure)",
       "ETL & Data Integration",
-      "Project Management"
+      "Cost & Performance Governance"
     ],
     "stats": {
       "projects": 10,
       "experience": 8,
       "satisfaction": 100
     }
+  },
+  "hero": {
+    "tabTitle": "AI Solutions · Data & Analytics",
+    "line1": "AI Solutions Engineer |",
+    "line2": "Strategy - Data & Analytics"
   },
   "services": [
     {

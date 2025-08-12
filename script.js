@@ -53,6 +53,76 @@ const projectsGrid = document.getElementById('projectsGrid');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
+// Config Loader
+async function loadSiteConfig() {
+  try {
+    const response = await fetch('config.json', { cache: 'no-store' });
+    const cfg = await response.json();
+    applyConfig(cfg);
+  } catch (err) {
+    console.error('Failed to load config.json', err);
+  }
+}
+
+function applyConfig(cfg) {
+  if (!cfg) return;
+
+  // Document title (optional short tab title)
+  if (cfg.hero && cfg.hero.tabTitle) {
+    document.title = cfg.hero.tabTitle;
+  }
+
+  // Hero title (two lines)
+  if (cfg.hero && cfg.hero.line1 && cfg.hero.line2) {
+    const heroTitleEl = document.querySelector('.hero-title');
+    if (heroTitleEl) {
+      heroTitleEl.innerHTML = `${cfg.hero.line1}<br/><span class="highlight">${cfg.hero.line2}</span>`;
+    }
+  }
+
+  // Hero description
+  if (cfg.personal && cfg.personal.description) {
+    const heroDesc = document.querySelector('.hero-description');
+    if (heroDesc) heroDesc.textContent = cfg.personal.description;
+  }
+
+  // Profile card
+  if (cfg.personal) {
+    const nameEl = document.querySelector('.profile-info h3');
+    if (nameEl && cfg.personal.name) nameEl.textContent = cfg.personal.name;
+
+    const subtitleEl = document.querySelector('.profile-info p:not(.location)');
+    if (subtitleEl && cfg.personal.title) subtitleEl.textContent = cfg.personal.title;
+
+    const locEl = document.querySelector('.profile-info .location');
+    if (locEl && cfg.personal.location) {
+      // Keep icon and only update text
+      const icon = locEl.querySelector('i');
+      locEl.textContent = ` ${cfg.personal.location}`;
+      if (icon) locEl.prepend(icon);
+    }
+
+    const avatarImg = document.querySelector('.profile-avatar .profile-image');
+    if (avatarImg && cfg.personal.profileImage) {
+      avatarImg.src = cfg.personal.profileImage;
+      avatarImg.alt = cfg.personal.name || 'Profile';
+    }
+  }
+
+  // About section
+  if (cfg.about) {
+    const aboutParas = document.querySelectorAll('#about .about-content p');
+    if (aboutParas.length >= 1 && cfg.about.story) {
+      aboutParas[0].textContent = cfg.about.story;
+    }
+    if (aboutParas.length >= 2 && cfg.about.approach) {
+      aboutParas[1].textContent = cfg.about.approach;
+    }
+    const introEl = document.querySelector('#about .section-intro');
+    if (introEl && cfg.about.intro) introEl.textContent = cfg.about.intro;
+  }
+}
+
 // Theme Management
 function initTheme() {
   const saved = localStorage.getItem('theme');
