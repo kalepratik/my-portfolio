@@ -10,8 +10,8 @@
   },
   "about": {
     "intro": "Better decisions at scale — AI + data, human teams in the loop.",
-    "story": "Partner across product, data, and analytics to deliver ingestion → models → metrics/semantic layer → insights, with selective LLM/RAG. Translate goals into platform choices and operating standards, then lead reference builds and performance fixes where impact is highest.",
-    "approach": "Outcomes first; co‑create lean standards (data contracts, metrics layer, cost/perf guardrails); build reference implementations; pair and review with engineers and analysts; coach and document essentials; hand over maintainable systems.",
+    "story": "I partner with product, data, and analytics teams to ship end‑to‑end: ingestion → models → metrics/semantic layer → insights, using LLM/RAG only where it helps. I translate business goals into platform choices and operating standards, and I lead reference builds or performance fixes when they unblock the team.",
+    "approach": "I start with outcomes, then co‑create lean standards (data contracts, metrics layer, cost/perf guardrails). I build reference implementations, pair and review with engineers and analysts, coach as we go, document the essentials, and hand over systems teams can own.",
     "skills": [
       "AI/RAG Patterns",
       "Semantic Layers & Metrics",
