@@ -2,16 +2,16 @@
   "personal": {
     "name": "Pratik Kumar Kale",
     "title": "AI Solutions Engineer | Strategy - Data & Analytics",
-    "description": "I design and ship AI-powered data and analytics solutions with measurable outcomes — reliable platforms, governed data, and fast insights.",
+    "description": "I help product, data, and analytics teams deliver AI‑powered outcomes — reliable platforms, governed data, and fast, useful insights. I set clear standards, remove friction, and make results measurable.",
     "email": "kpratik64@gmail.com",
     "phone": "+91 8919052874",
     "location": "Hyderabad, Telangana, India",
     "profileImage": "images/profile.jpg"
   },
   "about": {
-    "intro": "AI-led data and analytics strategy, delivered with reliable engineering.",
-    "story": "I design and ship AI-powered data and analytics solutions end to end: ingestion, modeling, semantic layers, and LLM/RAG where it helps — connecting business outcomes to platform choices so solutions are measurable, governable, and fast.",
-    "approach": "Focus areas: Strategy — Data & Analytics, RAG patterns and prompt safety, performance tuning and cost governance, metric/semantic layers, and clean handoffs between engineering and analysts across OCI, AWS, and Azure.",
+    "intro": "AI‑led data and analytics strategy that enables teams to move faster with reliability and governance.",
+    "story": "I enable teams to design and ship end‑to‑end data and analytics solutions: ingestion, modeling, semantic layers, and selective LLM/RAG. I translate business goals into platform choices and operating standards so outcomes are measurable, governed, and performant.",
+    "approach": "How I lead: clarify outcomes and KPIs; establish lightweight standards (data contracts, metrics/semantic layer, cost & performance guardrails); pair with engineers and analysts; coach and document just enough; hand over maintainable systems. Cloud: OCI, AWS, Azure.",
     "skills": [
       "AI/RAG Patterns",
       "Semantic Layers & Metrics",
