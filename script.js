@@ -56,7 +56,8 @@ const navMenu = document.querySelector('.nav-menu');
 // Config Loader
 async function loadSiteConfig() {
   try {
-    const response = await fetch('config.json', { cache: 'no-store' });
+    // Cache-bust to ensure GitHub Pages/CDN serves the latest config
+    const response = await fetch(`config.json?v=${Date.now()}`, { cache: 'no-store' });
     const cfg = await response.json();
     applyConfig(cfg);
   } catch (err) {
