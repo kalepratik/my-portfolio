@@ -4,37 +4,43 @@ const projects = [
     title: "AWS → OCI Data Lake Migration",
     summary: "Cross-cloud move with staged cutover, object storage tiering, and ADW federation. Reduced monthly spend and improved refresh SLAs.",
     tags: ["OCI", "AWS", "ADW", "Object Storage", "Data Lake"],
-    links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }],
+    icon: 'fas fa-cloud'
   },
   {
     title: "ITVCMS Platform",
     summary: "Training ops platform with auth, mentor mapping, and integrations for Udemy and YouTube metadata.",
     tags: ["Django", "React", "Postgres", "OAuth2"],
-    links: [{ href: "https://github.com/kpratik64", label: "Repo" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Repo" }],
+    icon: 'fas fa-laptop-code'
   },
   {
     title: "Oracle Analytics Server on OCI",
     summary: "Provisioned OAS with hardened networking. Automated deploys, RCU setup, and catalog migration.",
     tags: ["OAS", "OBIEE", "RCU", "Linux"],
-    links: [{ href: "https://github.com/kpratik64", label: "Runbook" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Runbook" }],
+    icon: 'fas fa-chart-line'
   },
   {
     title: "RAG Chatbot PoC on OCI",
     summary: "Multi-lingual retrieval with vector search, prompt safety, and observability hooks.",
     tags: ["RAG", "Vector DB", "LLM", "OCI"],
-    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
+    icon: 'fas fa-robot'
   },
   {
     title: "Google Workspace Automations",
     summary: "Apps Script workflows for lead routing, calendar sync, and doc templating.",
     tags: ["Apps Script", "Sheets", "Gmail", "Calendar"],
-    links: [{ href: "https://github.com/kpratik64", label: "Samples" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Samples" }],
+    icon: 'fas fa-gears'
   },
   {
     title: "Odoo Partner Utilities",
     summary: "Internal tools for discovery, scope mapping, and implementation estimates.",
     tags: ["Odoo", "ETL", "Analytics"],
-    links: [{ href: "https://github.com/kpratik64", label: "Toolkit" }]
+    links: [{ href: "https://github.com/kpratik64", label: "Toolkit" }],
+    icon: 'fas fa-toolbox'
   }
 ];
 
@@ -77,7 +83,7 @@ function renderProjects(filteredProjects = projects) {
           <h3 class="project-title">${project.title}</h3>
           <p class="project-summary">${project.summary}</p>
         </div>
-        <div class="project-icon"></div>
+        <div class="project-icon">${project.icon ? `<i class="${project.icon}"></i>` : '<i class="fas fa-folder"></i>'}</div>
       </div>
       <div class="project-tags">
         ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
