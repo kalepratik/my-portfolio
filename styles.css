@@ -194,6 +194,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero-title .highlight {
+  font-size: 0.9em;
+}
+
 .highlight {
   color: rgb(var(--primary));
 }
