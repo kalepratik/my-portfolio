@@ -2,9 +2,6 @@ name: Build Resume (MD -> HTML -> PDF)
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'resume/resume.md'
 
 jobs:
   build:
