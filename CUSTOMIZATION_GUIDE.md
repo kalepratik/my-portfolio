@@ -21,7 +21,7 @@ Your changes will automatically appear when you refresh the website.
   "email": "your.email@example.com",                           // ← Your email
   "phone": "+1 (555) 123-4567",                                // ← Your phone
   "location": "Your City, State",                              // ← Your location
-  "profileImage": "images/profile.jpg"                         // ← Your photo (optional)
+  "profileImage": "assets/images/profile.jpg"                  // ← Your photo (optional)
 }
 ```
 
