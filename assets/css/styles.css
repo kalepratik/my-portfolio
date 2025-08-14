@@ -540,6 +540,26 @@ body {
 
 .previous-roles { margin-top: 0.5rem; }
 
+/* Custom summary toggle (+/-) and hide native marker */
+summary.previous-summary { list-style: none; cursor: pointer; }
+summary.previous-summary::-webkit-details-marker { display: none; }
+summary.previous-summary::marker { content: ''; }
+
+.previous-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: rgb(var(--foreground));
+  background: rgb(var(--primary) / 0.1);
+  border: 1px solid rgb(var(--primary) / 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.previous-summary .toggle::before { content: '+'; font-weight: 700; width: 0.75rem; display: inline-block; text-align: center; }
+details[open] .previous-summary .toggle::before { content: '\2212'; }
+
 /* Projects */
 .projects-filters {
   display: flex;
