@@ -50,7 +50,7 @@ tmp/
 temp/
 
 # Reference folders
-reference/
+references/
 
 # Optional npm cache directory
 .npm
