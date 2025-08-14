@@ -9,9 +9,9 @@
     "profileImage": "assets/images/profile.jpg"
   },
   "about": {
-    "intro": "Better decisions at scale — AI and data, with human teams in the loop.",
-    "story": "I partner with product, data, and analytics teams to ship end‑to‑end: ingestion → models → a metrics and semantic layer → insights, using LLM/RAG only where it adds value. I translate business goals into platform choices and operating standards, and step in hands‑on for prototypes and performance fixes when that unblocks the team.",
-    "approach": "I start with outcomes, then co‑create light standards: clear schemas (data contracts), one source of truth for metrics (metrics and semantic layer), and cost and performance guardrails. I create working examples, pair with engineers and analysts on reviews, coach as we build, document the essentials, and hand over systems teams can own.",
+    "intro": "Bridging business and engineering — turning objectives into governed data and analytics that people use.",
+    "story": "I moved from sales leadership into analytics, so I map expectations to technical requirements instinctively. I work end‑to‑end: ingestion → models → semantic/metrics layer → dashboards, using AI where it adds real value. I jump hands‑on to prototype, tune performance, and unblock teams.",
+    "approach": "Outcomes first. Co‑create simple standards: data contracts, a single semantic/metrics layer, access with RLS, and cost/performance guardrails. Build working examples, pair with engineers and analysts, document what matters, and hand over systems teams can own.",
     "skills": [
       "AI/RAG Patterns",
       "Semantic Layers & Metrics",
