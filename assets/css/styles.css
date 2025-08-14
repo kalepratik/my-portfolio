@@ -367,8 +367,10 @@ body {
 
 .section-header {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -382,6 +384,19 @@ body {
   font-size: 0.875rem;
   color: rgb(var(--muted-foreground));
   max-width: 60ch;
+  line-height: 1.6;
+}
+
+/* Improve contrast for section one-liners in dark mode */
+.dark .section-intro {
+  color: rgb(var(--foreground));
+  opacity: 0.9;
+}
+
+/* Slightly brighten hero description in dark mode */
+.dark .hero-description {
+  color: rgb(var(--foreground));
+  opacity: 0.85;
 }
 
 /* About */
@@ -479,6 +494,75 @@ body {
   margin-bottom: 0.25rem;
 }
 
+/* In-card role progression (promotions within same company) */
+.role-timeline {
+  position: relative;
+  border-left: 2px dashed rgb(var(--border));
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.role-step {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.role-step:last-child { margin-bottom: 0; }
+
+.role-marker {
+  display: none;
+}
+
+.role-marker--plain {
+  background: rgb(var(--primary));
+  border-color: rgb(var(--primary));
+  color: transparent;
+}
+
+.role-title {
+  font-weight: 600;
+}
+
+.role-period {
+  font-size: 0.8rem;
+  color: rgb(var(--muted-foreground));
+  margin-bottom: 0.25rem;
+}
+
+.promotion-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: rgb(var(--foreground));
+  background: rgb(var(--primary) / 0.1);
+  border: 1px solid rgb(var(--primary) / 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.previous-roles { margin-top: 0.5rem; }
+
+/* Custom summary toggle (+/-) and hide native marker */
+summary.previous-summary { list-style: none; cursor: pointer; }
+summary.previous-summary::-webkit-details-marker { display: none; }
+summary.previous-summary::marker { content: ''; }
+
+.previous-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: rgb(var(--foreground));
+  background: rgb(var(--primary) / 0.1);
+  border: 1px solid rgb(var(--primary) / 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.previous-summary .toggle::before { content: '+'; font-weight: 700; width: 0.75rem; display: inline-block; text-align: center; }
+details[open] .previous-summary .toggle::before { content: '\2212'; }
+
 /* Projects */
 .projects-filters {
   display: flex;
@@ -514,8 +598,18 @@ body {
   border: 1px solid rgb(var(--border));
   border-radius: 1rem;
   background: rgb(var(--background));
+  color: rgb(var(--foreground));
   font-size: 0.875rem;
   outline: none;
+}
+
+/* Dark mode typing color for project search */
+.dark .search-box input {
+  color: #ffffff;
+  caret-color: #ffffff;
+}
+.dark .search-box input::placeholder {
+  color: rgb(var(--muted-foreground));
 }
 
 .search-box input:focus {
@@ -527,20 +621,56 @@ body {
   border: 1px solid rgb(var(--border));
   border-radius: 1rem;
   background: rgb(var(--background));
+  color: rgb(var(--foreground));
   font-size: 0.875rem;
   outline: none;
+  min-width: 11rem;
+  font-weight: 500;
+}
+
+/* Improve contrast in dark mode for filter label and select */
+.dark .filter-label { color: rgb(var(--foreground)); }
+/* Tech filter (custom dropdown with grid) */
+.tech-filter { position: relative; }
+.tech-toggle {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 0.75rem; border: 1px solid rgb(var(--border));
+  border-radius: 1rem; background: rgb(var(--background)); color: rgb(var(--foreground));
+}
+.dark .tech-toggle { background: rgb(var(--card) / 0.2); box-shadow: 0 0 0 1px rgb(var(--border) / 0.6) inset; }
+.tech-menu {
+  position: absolute; right: 0; top: calc(100% + 0.5rem);
+  background: rgb(var(--background)); color: rgb(var(--foreground));
+  border: 1px solid rgb(var(--border)); border-radius: 0.75rem; padding: 0.5rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); width: min(90vw, 320px);
+  max-height: 360px; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  z-index: 20;
+}
+.dark .tech-menu { background: rgb(var(--card)); }
+.tech-filter * { pointer-events: auto; }
+.tech-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
+.tech-item {
+  padding: 0.4rem 0.6rem; border: 1px solid rgb(var(--border)); border-radius: 0.75rem;
+  background: rgb(var(--background)); color: rgb(var(--foreground)); cursor: pointer; font-size: 0.875rem;
+  width: 100%; text-align: left;
+}
+.tech-item:hover { background: rgb(var(--muted)); }
+
+/* Focus styles for accessibility */
+#tagFilter:focus, .search-box input:focus {
+  box-shadow: 0 0 0 4px rgb(var(--primary) / 0.25);
 }
 
 .btn-reset {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.35rem 0.6rem;
   border: 1px solid rgb(var(--border));
   border-radius: 1rem;
   background: transparent;
   color: rgb(var(--foreground));
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -849,10 +979,7 @@ body {
     display: none;
   }
   
-  .hero-container {
-    flex-direction: row;
-    gap: 2.5rem;
-  }
+  .hero-container { flex-direction: row; gap: 2.5rem; }
   
   .hero-title {
     font-size: 3rem;
@@ -862,18 +989,21 @@ body {
     white-space: nowrap;
   }
   
-  .hero-description {
-    font-size: 1.125rem;
-  }
+  .hero-description { font-size: 1.125rem; }
   
-  .section-header {
-    flex-direction: row;
-  }
+  .section-header { flex-direction: row; align-items: end; justify-content: space-between; }
   
   .projects-filters {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
   }
+
+  /* Push filter controls to the right side on desktop */
+  .projects-filters .filter-label { margin-left: auto; }
+  .projects-filters #tagFilter { margin-left: 0.5rem; }
+  .projects-filters .btn-reset { margin-left: 0.5rem; }
   
   .footer-content {
     flex-direction: row;

@@ -49,6 +49,9 @@ coverage/
 tmp/
 temp/
 
+# Reference folders
+references/
+
 # Optional npm cache directory
 .npm
 

@@ -2,8 +2,8 @@
 const projects = [
   {
     title: "AWS → OCI Data Lake Migration",
-    summary: "Cross-cloud move with staged cutover, object storage tiering, and ADW federation. Reduced monthly spend and improved refresh SLAs.",
-    tags: ["OCI", "AWS", "ADW", "Object Storage", "Data Lake"],
+    summary: "Cross‑cloud move for a multinational FMCG: staged cutover, tiered storage, ADW federation. Enterprise Power BI with gateway/RLS and API automations for refresh & ops. ~30% lower cost, 99.9% pipeline uptime.",
+    tags: ["OCI", "AWS", "ADW", "Object Storage", "Data Lake", "Power BI", "APIs"],
     links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }],
     icon: 'fas fa-cloud'
   },
@@ -15,32 +15,53 @@ const projects = [
     icon: 'fas fa-laptop-code'
   },
   {
-    title: "Oracle Analytics Server on OCI",
-    summary: "Provisioned OAS with hardened networking. Automated deploys, RCU setup, and catalog migration.",
-    tags: ["OAS", "OBIEE", "RCU", "Linux"],
+    title: "Oracle Analytics Server on OCI (Logistics)",
+    summary: "Upgrade journey: OBIEE 10g → OAS on OCI with hardened networking, automated deploys, RCU setup, and catalog migration for a PAN‑India logistics firm.",
+    tags: ["OAS", "OBIEE", "RCU", "Linux", "OCI", "Logistics"],
     links: [{ href: "https://github.com/kpratik64", label: "Runbook" }],
     icon: 'fas fa-chart-line'
   },
   {
     title: "RAG Chatbot PoC on OCI",
-    summary: "Multi-lingual retrieval with vector search, prompt safety, and observability hooks.",
+    summary: "Multi‑lingual retrieval with vector search, prompt safety, and observability hooks; applied only where it adds value.",
     tags: ["RAG", "Vector DB", "LLM", "OCI"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
     icon: 'fas fa-robot'
   },
   {
-    title: "Google Workspace Automations",
-    summary: "Apps Script workflows for lead routing, calendar sync, and doc templating.",
-    tags: ["Apps Script", "Sheets", "Gmail", "Calendar"],
+    title: "Google Workspace Automations (In‑house CRM)",
+    summary: "End‑to‑end lead pipeline: Forms → Sheets segmentation by stage, lead routing, calendar sync, and notifications with Apps Script — lightweight in‑house CRM.",
+    tags: ["Apps Script", "Sheets", "Gmail", "Calendar", "CRM"],
     links: [{ href: "https://github.com/kpratik64", label: "Samples" }],
     icon: 'fas fa-gears'
   },
   {
-    title: "Odoo Partner Utilities",
-    summary: "Internal tools for discovery, scope mapping, and implementation estimates.",
-    tags: ["Odoo", "ETL", "Analytics"],
+    title: "Odoo Partnership Implementations",
+    summary: "Partnered to implement Odoo for multiple customers. Converted business workflows into technical processes, data pipelines, and reporting.",
+    tags: ["Odoo", "ETL", "Analytics", "Workflows"],
     links: [{ href: "https://github.com/kpratik64", label: "Toolkit" }],
     icon: 'fas fa-toolbox'
+  },
+  {
+    title: "OCI Data Lake for Pharma (Greenfield)",
+    summary: "Data warehouse to monitor drug development lifecycle with FDA compliance. ODI for ETL, Tableau for realtime monitoring, Python automations, Tableau APIs for metadata & logging.",
+    tags: ["OCI", "ODI", "Tableau", "Python", "Pharma"],
+    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
+    icon: 'fas fa-prescription-bottle'
+  },
+  {
+    title: "dbt Enablement — BFSI (3‑week)",
+    summary: "Hands‑on enablement for a large BFSI on dbt best practices: Git workflows, tests, lineage, environments, and CI.",
+    tags: ["dbt", "BFSI", "Enablement"],
+    links: [{ href: "https://github.com/kpratik64", label: "Curriculum" }],
+    icon: 'fas fa-chalkboard-teacher'
+  },
+  {
+    title: "Redshift ELT with dbt — Modernization (BFSI)",
+    summary: "Leaping from S3 → EMR → Redshift ETL to dbt + Redshift ELT: zero EMR overhead, faster delivery, lower costs, governance built‑in, and future‑ready platform.",
+    tags: ["AWS", "Redshift", "dbt", "ELT", "BFSI"],
+    links: [{ href: "https://github.com/kpratik64", label: "Solution Notes" }],
+    icon: 'fas fa-rocket'
   }
 ];
 
@@ -52,6 +73,12 @@ const resetFilters = document.getElementById('resetFilters');
 const projectsGrid = document.getElementById('projectsGrid');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const techFilterToggle = document.getElementById('techFilterToggle');
+const techFilterMenu = document.getElementById('techFilterMenu');
+const techFilterLabel = document.getElementById('techFilterLabel');
+
+// Active technology filter state (for custom menu)
+let activeTech = '';
 
 // Config Loader
 async function loadSiteConfig() {
@@ -171,8 +198,9 @@ function renderProjects(filteredProjects = projects) {
 }
 
 function filterProjects() {
-  const query = projectSearch.value.toLowerCase();
-  const selectedTag = tagFilter.value;
+  const query = (projectSearch?.value || '').toLowerCase();
+  const selectedTagRaw = tagFilter ? tagFilter.value : activeTech;
+  const selectedTag = (selectedTagRaw || '').toLowerCase();
   
   const filtered = projects.filter(project => {
     const matchesQuery = !query || 
@@ -180,7 +208,7 @@ function filterProjects() {
       project.summary.toLowerCase().includes(query) ||
       project.tags.some(tag => tag.toLowerCase().includes(query));
     
-    const matchesTag = !selectedTag || project.tags.includes(selectedTag);
+    const matchesTag = !selectedTag || project.tags.some(t => t.toLowerCase() === selectedTag);
     
     return matchesQuery && matchesTag;
   });
@@ -188,12 +216,16 @@ function filterProjects() {
   renderProjects(filtered);
   
   // Show/hide reset button
-  resetFilters.style.display = (query || selectedTag) ? 'inline-flex' : 'none';
+  if (resetFilters) {
+    resetFilters.style.display = (query || selectedTag) ? 'inline-flex' : 'none';
+  }
 }
 
 function resetProjectFilters() {
-  projectSearch.value = '';
-  tagFilter.value = '';
+  if (projectSearch) projectSearch.value = '';
+  if (tagFilter) tagFilter.value = '';
+  activeTech = '';
+  if (techFilterLabel) techFilterLabel.textContent = 'All technologies';
   filterProjects();
 }
 
@@ -266,7 +298,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listeners
   themeToggle.addEventListener('click', toggleTheme);
   projectSearch.addEventListener('input', filterProjects);
-  tagFilter.addEventListener('change', filterProjects);
+  // Built-in select (kept for fallback if present)
+  if (tagFilter) tagFilter.addEventListener('change', filterProjects);
+  // Custom tech filter menu
+  if (techFilterToggle && techFilterMenu) {
+    techFilterToggle.addEventListener('click', () => {
+      techFilterMenu.hidden = !techFilterMenu.hidden;
+    });
+    techFilterMenu.addEventListener('click', (e) => {
+      const btn = e.target.closest('.tech-item');
+      if (!btn) return;
+      const value = btn.getAttribute('data-value') || '';
+      // Update label
+      techFilterLabel.textContent = value || 'All technologies';
+      // Set state and reuse shared filter function
+      activeTech = value;
+      filterProjects();
+      techFilterMenu.hidden = true;
+    });
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!techFilterToggle.contains(e.target) && !techFilterMenu.contains(e.target)) {
+        techFilterMenu.hidden = true;
+      }
+    });
+  }
   resetFilters.addEventListener('click', resetProjectFilters);
   hamburger.addEventListener('click', toggleMobileMenu);
   
