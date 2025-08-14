@@ -367,11 +367,12 @@ body {
 
 .section-header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .section-header h2 {
@@ -381,10 +382,11 @@ body {
 }
 
 .section-intro {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: rgb(var(--muted-foreground));
-  max-width: 60ch;
-  line-height: 1.6;
+  max-width: 50ch;
+  line-height: 1.4;
+  flex-shrink: 1;
 }
 
 /* Improve contrast for section one-liners in dark mode */
@@ -1051,7 +1053,17 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
   
   .hero-description { font-size: 1.125rem; }
   
-  .section-header { flex-direction: row; align-items: end; justify-content: space-between; }
+  .section-header { 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 1.5rem;
+  }
+  
+  .section-intro {
+    font-size: 0.8rem;
+    max-width: 60ch;
+  }
   
   .projects-filters {
     flex-direction: column;
