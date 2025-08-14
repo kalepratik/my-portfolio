@@ -11,69 +11,95 @@ I help teams build AI‑enabled decision systems — reliable platforms, governe
 
 ## Core Leadership Areas
 - Data Platform Architecture (Lakehouse, Data Warehouse)
-- AI & Analytics Strategy (Self‑Service, Governance)
-- Cloud Platforms (OCI / AWS / Azure)
-- Data Governance, Security & Compliance
+- AI & Analytics Strategy (RAG, LLM Integration)
+- Performance & Cost Optimization
 - Team Leadership & Mentorship
-- Cost Optimization & FinOps
-- Stakeholder Management & Executive Communication
-- Vendor Management & Build/Buy Decisions
-- ETL/ELT Pipeline Design & Optimization
-- Performance Tuning & SLA Management
+- Business-Technology Translation
 
-## Career Highlights
-- Migrated data lake from AWS to OCI, cutting cloud costs by 30% and achieving 99.9% pipeline uptime
-- Reduced BI dashboard load time from 15s to 3s for 500+ users
-- Established clear schemas (data contracts), metrics/semantic layer, and CI/CD for pipelines — 60% fewer incidents in 6 months
-- Scaled analytics team from 3 to 8 engineers; on‑time delivery improved from 70% to 95%
+---
 
-## Experience
-**ITECHVERSITY SOLUTIONS PVT LTD — Hyderabad, India**  
-Lead Data Analytics Engineer (2022 – Present)
+## Professional Experience
 
-- Built data platform on OCI and AWS; refresh SLAs from 8h to 30m; 99.9% uptime
-- Delivered self‑service AI & BI strategy (Power BI, OAS); 70% faster time‑to‑insight
-- Instituted data contracts and CI/CD; 60% fewer incidents; 80% less manual intervention
-- Optimized ADW connectivity and governed cost baselines; ~$50K/yr savings
+### Lead Data Analytics Engineer
+**INFOLOB** | Oct 2024 — Present
+- Drive analytics engineering and Power BI initiatives; mentor teams and improve platform reliability.
 
-**INFOLOB (Engagement) — Hyderabad, India**  
-Data Engineering Consultant (2024)
+### Senior Analytics Engineer
+**ITVersity, Inc.** | Apr 2024 — Oct 2024
+- Led enterprise Power BI rollouts (gateway, RLS, native connectors) and API automations for refresh/ops.
+- Directed AWS → OCI data lake migration (Cloudera → ADW) with rigorous SQL validation and performance tuning.
+- Partnered with DE teams across Glue, OCI DI, ADF, and Airflow; reviewed models and mentored juniors.
 
-- Migrated data lake AWS → OCI (staged cutover); 30% cost reduction; T+1 reliability to 99.5%
-- Optimized ADW connectivity and governed cost baselines; 40% faster analytics queries
+### Associate Data Engineer
+**ITVersity, Inc.** | Jul 2023 — Mar 2024
+- Built dashboards and semantic models; implemented AD/RLS and gateway basics for secure access.
+- Supported data lake migration tasks and SQL data validation; contributed to refresh optimization.
+- Learned CI/CD and Git workflows; documented runbooks and supported stakeholder demos.
 
-**CLOVERTEX (Engagement) — Hyderabad, India**  
-BI & Data Warehouse Consultant (2025)
+### Deputy General Manager — Data Analytics Transition
+**Elevate X** | Dec 2020 — Jun 2023
+- Led transition from sales to data‑driven operations; built Power BI dashboards aligned to business objectives.
+- Integrated AD and RLS; trained users on storytelling; optimized performance and governed gateways.
+- Career shift: mapped business expectations to technical requirements, bridging sales leadership with analytics engineering.
+- Translated KPIs into semantic models and governed datasets; defined metrics and access patterns adopted by business teams.
+- Partnered with data engineers to shape pipelines and data contracts, enabling reliable refreshes and trust in numbers.
+- Drove adoption via enablement sessions, documentation, and feedback loops — foundation for moving full‑time into IT.
 
-- Built data warehouse on OCI with Tableau; compliance‑minded delivery
-- Set up ingestion standards and data contracts; 75% reduction in data quality issues
+### Assistant Sales Manager
+**HomeLane** | Aug 2019 — Dec 2020
+- Built top‑performing unit; sustained ~15% conversion ratio; introduced Excel dashboards for decision support.
+- Made Banjara Hills unit #1 PAN‑India within four months through pipeline hygiene and coaching.
+- Grew sales order book consistently by focusing on qualification, follow‑ups, and objection handling.
+- Strengthened customer empathy and handover rituals to improve post‑sale satisfaction and referrals.
 
-## Selected Programs & Projects
-- OCI Data Platform Migration — Lead Architect | OCI, AWS, Python | 30% cost reduction, 99.9% uptime
-- Self‑Service AI & BI Implementation — Strategy Owner | Power BI, OAS | 70% faster insights, 85% adoption
-- Data Governance Framework — Lead | Data Contracts, CI/CD | 60% fewer incidents, 80% less manual work
-- Cost Optimization Program — Owner | OCI, FinOps | ~$50K annual savings, 40% performance gain
+### Field Sales Manager
+**HomeLane** | Jan 2019 — Aug 2019
+- Generated ₹1 Cr in a month; led a 20‑member team; boosted meeting success 65% → 90%.
+- Increased structured channel meetings by ~300% in one quarter; improved discipline and cadence.
+- Coached field reps on discovery and solution framing; improved conversion quality and cycle time.
+- Recognized as Best Field Sales Manager for consistent goal attainment and team development.
 
-## Thought Leadership
-- Speaking: Data Platform Architecture at Oracle Cloud Summit, 2024
-- Publication: “Modern Data Architecture on OCI” — 2024
-- Open Source: Contributions to data governance and ETL optimization tools
+### Team Lead
+**Amazon** | Jun 2017 — Dec 2018
+- Improved team productivity by ~20% via workflow optimization and coaching; resolved escalations.
+- Reduced completion time ~15% by streamlining queues and clarifying SOPs.
+- Lifted team morale ~25% with clear goals, recognition, and regular feedback loops.
+- Built leadership habits: stakeholder comms, conflict resolution, and bias‑for‑action under pressure.
 
-## Education & Certifications
-- Bachelor’s in Computer Science — University (2016)
-- Oracle Cloud Foundations (target)
-- Microsoft Certified: Data Analyst Associate (Power BI)
-- AWS Solutions Architect (target)
+### Senior Customer Service Associate
+**Amazon** | Jun 2016 — May 2017
+- Maintained ~95% CSAT; implemented CRM improvements reducing response time by ~20%.
+- Handled ~50 inquiries/day within SLAs; analyzed trends to cut repeat issues by ~15%.
+- Built empathy and customer‑first problem solving; set the base for leadership in later roles.
 
-## Tools & Technologies
-- Languages: Python, SQL, DAX
-- Data & ETL: Spark, ODI, OCI Data Integration, ADF, dbt
-- Analytics & BI: Power BI, Tableau, OAS/OBIEE, Oracle ADW
-- Cloud & Infra: OCI, AWS, Azure — Storage, Compute, Networking, Security
-- Databases: Oracle ADW, PostgreSQL, Snowflake
-- Development: Django, FastAPI, React, REST APIs, Git, CI/CD
+---
 
-## Awards & Recognition
-- Excellence in Data Engineering — ITechVersity Solutions, 2023
-- Best Performance Award — INFOLOB Engagement, 2024
-- Innovation in Cloud Architecture — Oracle Partner Network, 2024
+## Technical Skills
+
+### Cloud & Infrastructure
+Oracle Cloud (OCI), AWS, Azure, Linux, Docker, VPC/VCN, IAM
+
+### Data & ETL
+SQL, Python, Spark, ODI, OCI Data Integration, ADF, dbt, Airflow, Power Query
+
+### Analytics & BI
+Power BI, Tableau, OAS/OBIEE, Oracle ADW, RAG (PoC), DAX, Semantic Models, Row‑Level Security (RLS), Gateway & Subscriptions, Paginated Reports, Performance Tuning, Storytelling & Enablement
+
+### Applications & Development
+Django, FastAPI, React, REST APIs, Apps Script, Git, CI/CD
+
+### Data Warehouses & Databases
+Oracle ADW, Amazon Redshift, PostgreSQL
+
+### Governance & Operations
+Semantic Models, Row‑Level Security (RLS), Gateways & Access Patterns, Data Contracts & Testing, Lineage & Monitoring, Performance & Cost Guardrails
+
+---
+
+## Education
+**Bachelor's Degree** | Relevant field of study
+
+---
+
+## Languages
+English (Professional), Hindi (Native), Telugu (Conversational)

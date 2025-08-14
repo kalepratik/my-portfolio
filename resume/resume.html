@@ -5,308 +5,736 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratik Kumar Kale - Resume</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+        
+        * {
             margin: 0;
-            padding: 20px;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #ffffff;
+            font-size: 11pt;
+            max-width: 100%;
+        }
+        
+        .container {
             max-width: 800px;
             margin: 0 auto;
+            padding: 0;
         }
+        
+        /* Header Section */
         .header {
-            text-align: center;
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .name {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #1e40af;
-        }
-        .title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .contact-info {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.8;
-        }
-        .contact-info a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .section {
+            text-align: left;
             margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
         }
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #1e40af;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 5px;
+        
+        .name {
+            font-size: 28pt;
+            font-weight: 300;
+            color: #1a202c;
+            margin-bottom: 6px;
+            letter-spacing: -1px;
+        }
+        
+        .title {
+            font-size: 14pt;
+            color: #4a5568;
             margin-bottom: 15px;
+            font-weight: 400;
         }
-        .company {
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-        .position {
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 5px;
-        }
-        .duration {
-            font-style: italic;
-            color: #6b7280;
-            margin-bottom: 10px;
-        }
-        .scope {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #374151;
-        }
-        .achievements {
-            margin-left: 20px;
-        }
-        .achievements li {
+        
+        .contact-info {
+            font-size: 10pt;
+            color: #718096;
+            line-height: 1.6;
             margin-bottom: 8px;
         }
-        .highlights {
-            margin-left: 20px;
+        
+        .contact-info a {
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s ease;
         }
-        .highlights li {
-            margin-bottom: 8px;
+        
+        .contact-info a:hover {
+            color: #4a5568;
         }
-        .project {
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            background: #ffffff;
+        }
+        
+        .section-title {
+            font-size: 12pt;
+            font-weight: 500;
+            color: #1a202c;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+        
+        /* Executive Summary */
+        .summary {
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #4a5568;
             margin-bottom: 10px;
         }
+        
+        .leadership-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
+        }
+        
+        .leadership-area {
+            background: #f7fafc;
+            color: #2d3748;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 8pt;
+            font-weight: 400;
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px;
+            background: #f7fafc;
+        }
+        
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .company-name {
+            font-weight: 500;
+            font-size: 11pt;
+            color: #1a202c;
+        }
+        
+        .company-location {
+            font-size: 9pt;
+            color: #718096;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+        
+        .company-duration {
+            font-size: 9pt;
+            color: #718096;
+            font-weight: 400;
+        }
+        
+        .role-item {
+            margin-bottom: 8px;
+            margin-left: 12px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 8px;
+        }
+        
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .role-title {
+            font-weight: 500;
+            font-size: 10pt;
+            color: #2d3748;
+        }
+        
+        .role-duration {
+            font-size: 8pt;
+            color: #718096;
+            font-weight: 400;
+        }
+        
+        .role-description {
+            margin-left: 8px;
+        }
+        
+        .role-description ul {
+            margin: 2px 0;
+            padding-left: 12px;
+        }
+        
+        .role-description li {
+            margin-bottom: 2px;
+            font-size: 9pt;
+            color: #4a5568;
+            line-height: 1.3;
+        }
+        
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 8px;
+            padding: 8px;
+            background: #f7fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            border-left: 3px solid #4a5568;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
         .project-title {
-            font-weight: 600;
-            color: #374151;
+            font-weight: 500;
+            font-size: 10pt;
+            color: #1a202c;
         }
-        .project-details {
-            color: #6b7280;
-            font-size: 14px;
+        
+        .project-link {
+            font-size: 8pt;
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 2px 5px;
+            background: #ffffff;
+            border-radius: 3px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
         }
+        
+        .project-link:hover {
+            background: #2d3748;
+            color: #ffffff;
+        }
+        
+        .project-description {
+            font-size: 9pt;
+            color: #4a5568;
+            margin-left: 8px;
+            line-height: 1.3;
+        }
+        
+        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 12px;
         }
+        
         .skill-category {
-            margin-bottom: 15px;
+            margin-bottom: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 8px;
+            background: #f7fafc;
         }
+        
         .skill-category-title {
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 5px;
+            font-weight: 500;
+            color: #1a202c;
+            margin-bottom: 4px;
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 2px;
         }
+        
         .skill-list {
+            list-style: none;
+            padding: 0;
             margin: 0;
-            padding-left: 20px;
         }
+        
         .skill-list li {
-            margin-bottom: 3px;
+            font-size: 8pt;
+            color: #4a5568;
+            margin-bottom: 1px;
+            padding: 1px 0;
+            line-height: 1.2;
         }
-        .keywords {
-            background-color: #f3f4f6;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 14px;
-            line-height: 1.8;
+        
+        /* Education Section */
+        .education-item {
+            margin-bottom: 8px;
+            padding: 8px;
+            background: #f7fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            border-left: 3px solid #4a5568;
         }
+        
+        .education-degree {
+            font-weight: 500;
+            color: #1a202c;
+            font-size: 10pt;
+            margin-bottom: 2px;
+        }
+        
+        .education-school {
+            font-size: 9pt;
+            color: #718096;
+            font-weight: 400;
+        }
+        
+        /* Languages Section */
+        .languages {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .language-item {
+            font-size: 9pt;
+            padding: 4px 8px;
+            background: #f7fafc;
+            border-radius: 4px;
+            font-weight: 400;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .language-level {
+            color: #718096;
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        /* Print Styles */
         @media print {
             body {
-                padding: 0;
-                font-size: 12px;
+                font-size: 8pt;
+                line-height: 1.2;
             }
-            .name {
-                font-size: 24px;
+            
+            .section {
+                border: 1px solid #e2e8f0;
+                margin-bottom: 10px;
+                padding: 8px;
             }
-            .title {
-                font-size: 16px;
+            
+            .experience-item {
+                border: 1px solid #e2e8f0;
+                margin-bottom: 8px;
+                padding: 6px;
             }
-            .section-title {
-                font-size: 16px;
+            
+            .project-item {
+                border: 1px solid #e2e8f0;
+                margin-bottom: 6px;
+                padding: 5px;
+            }
+            
+            .skill-category {
+                border: 1px solid #e2e8f0;
+                margin-bottom: 6px;
+                padding: 5px;
+            }
+            
+            .education-item {
+                border: 1px solid #e2e8f0;
+                margin-bottom: 6px;
+                padding: 5px;
+            }
+            
+            .leadership-area {
+                background: #f7fafc;
+                color: #2d3748;
+                border: 1px solid #e2e8f0;
+                padding: 2px 6px;
+                font-size: 7pt;
+            }
+            
+            .project-link {
+                background: #ffffff;
+                color: #2d3748;
+                border: 1px solid #e2e8f0;
+                padding: 1px 3px;
+                font-size: 7pt;
+            }
+            
+            .role-description li {
+                font-size: 8pt;
+                margin-bottom: 1px;
+            }
+            
+            .project-description {
+                font-size: 8pt;
+            }
+            
+            .skill-list li {
+                font-size: 7pt;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="name">PRATIK KUMAR KALE</div>
-        <div class="title">AI SOLUTIONS ENGINEER | STRATEGY — DATA & ANALYTICS</div>
-        <div class="contact-info">
-            Hyderabad, Telangana, India | kpratik64@gmail.com | +91-8919052874<br>
-            <a href="https://www.linkedin.com/in/pratik-kumar-kale/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/kpratik64" target="_blank">GitHub</a> | 
-            <a href="https://kpratik64.github.io/my-portfolio/" target="_blank">Portfolio</a>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">EXECUTIVE SUMMARY</div>
-        <p>I help teams build AI‑enabled decision systems — reliable platforms, governed data, and fast, useful insights. Outcomes first; lean standards; sleeves‑rolled‑up execution (LLM/RAG prototypes, shaping SQL models, and performance fixes). 8+ years across data engineering, analytics, and BI with measurable wins in cost, reliability, and adoption.</p>
-    </div>
-
-    <div class="section">
-        <div class="section-title">CORE LEADERSHIP AREAS</div>
-        <ul class="highlights">
-            <li>Data Platform Architecture (Lakehouse, Data Warehouse)</li>
-            <li>AI & Analytics Strategy (Self-Service, Governance)</li>
-            <li>Cloud Platforms (OCI / AWS / Azure)</li>
-            <li>Data Governance, Security & Compliance</li>
-            <li>Team Leadership & Mentorship</li>
-            <li>Cost Optimization & FinOps</li>
-            <li>Stakeholder Management & Executive Communication</li>
-            <li>Vendor Management & Build/Buy Decisions</li>
-            <li>ETL/ELT Pipeline Design & Optimization</li>
-            <li>Performance Tuning & SLA Management</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <div class="section-title">CAREER HIGHLIGHTS</div>
-        <ul class="highlights">
-            <li>Migrated data lake from AWS to OCI, cutting cloud costs by 30% and improving pipeline reliability to 99.9% uptime.</li>
-            <li>Optimized BI estate reducing dashboard load time from 15s to 3s for 500+ users across multiple business units.</li>
-            <li>Established clear schemas (data contracts), metrics/semantic layer, and CI/CD for pipelines — 60% fewer incidents in 6 months.</li>
-            <li>Scaled analytics team from 3 to 8 engineers while improving on-time delivery from 70% to 95%.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <div class="section-title">EXPERIENCE</div>
-        
-        <div class="company">ITECHVERSITY SOLUTIONS PVT LTD — Hyderabad, India</div>
-        <div class="position">Lead Data Analytics Engineer</div>
-        <div class="duration">2022 – Present</div>
-        <div class="scope">Reports to: CTO. Team: 8 (Data Engineering, Analytics, BI). Budget: $500K. Tech: OCI, AWS, Power BI, OAS, Python, SQL.</div>
-        <div class="section-title" style="font-size: 14px; margin-top: 10px;">Selected Achievements</div>
-        <ul class="achievements">
-            <li>Built comprehensive data platform on OCI and AWS; reduced refresh SLAs from 8 hours to 30 minutes; achieved 99.9% uptime across all pipelines.</li>
-            <li>Delivered self-service BI strategy using Power BI and OAS, improving time-to-insight by 70% across 3 business units.</li>
-            <li>Instituted data contract governance and CI/CD for pipelines; cut incident rate by 60% and reduced manual intervention by 80%.</li>
-            <li>Optimized ADW connectivity and governed cost baselines, saving $50K/year in cloud infrastructure costs.</li>
-        </ul>
-        <div class="section-title" style="font-size: 14px; margin-top: 10px;">Key Initiatives</div>
-        <ul class="achievements">
-            <li>Rolled out self-service analytics with semantic models and certified datasets; user adoption increased to 85%.</li>
-            <li>Established data governance framework aligned with enterprise security policies and compliance requirements.</li>
-        </ul>
-
-        <div class="company" style="margin-top: 20px;">INFOLOB (ENGAGEMENT) — Hyderabad, India</div>
-        <div class="position">Data Engineering Consultant</div>
-        <div class="duration">2024</div>
-        <div class="scope">Team: 3; Domains: data migration, pipeline optimization; Stack: OCI, AWS, Python, SQL.</div>
-        <ul class="achievements">
-            <li>Migrated data lake from AWS to OCI with staged cutover; cut cloud costs by 30%; improved T+1 reliability to 99.5%.</li>
-            <li>Optimized ADW connectivity and governed cost baselines, reducing query response time by 40% for complex analytics workloads.</li>
-        </ul>
-
-        <div class="company" style="margin-top: 20px;">CLOVERTEX (ENGAGEMENT) — Hyderabad, India</div>
-        <div class="position">BI & Data Warehouse Consultant</div>
-        <div class="duration">2025</div>
-        <div class="scope">Team: 2; Domains: data warehouse, BI implementation; Stack: OCI, Tableau, SQL.</div>
-        <ul class="achievements">
-            <li>Built data warehouse on OCI with Tableau; implemented GxP-minded delivery approach ensuring compliance and data quality.</li>
-            <li>Set up ingestion standards and data contracts, reducing data quality issues by 75% and improving stakeholder confidence.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <div class="section-title">SELECTED PROGRAMS & PROJECTS</div>
-        <div class="project">
-            <div class="project-title">OCI Data Platform Migration</div>
-            <div class="project-details">Role: Lead Architect | Tech: OCI, AWS, Python | Impact: 30% cost reduction, 99.9% uptime</div>
-        </div>
-        <div class="project">
-            <div class="project-title">Self-Service AI & BI Implementation</div>
-            <div class="project-details">Role: Strategy Owner | Tech: Power BI, OAS | Impact: 70% faster insights, 85% adoption</div>
-        </div>
-        <div class="project">
-            <div class="project-title">Data Governance Framework</div>
-            <div class="project-details">Role: Lead | Tech: CI/CD, Data Contracts | Impact: 60% fewer incidents, 80% less manual work</div>
-        </div>
-        <div class="project">
-            <div class="project-title">Cost Optimization Program</div>
-            <div class="project-details">Role: Owner | Tech: OCI, FinOps | Impact: $50K annual savings, 40% performance improvement</div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">THOUGHT LEADERSHIP</div>
-        <ul class="highlights">
-            <li>Speaking: Data Platform Architecture at Oracle Cloud Summit, 2024</li>
-            <li>Publications: "Modern Data Architecture on OCI" - Tech Blog, 2024</li>
-            <li>Open Source: Contributed to data governance frameworks and ETL optimization tools</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <div class="section-title">EDUCATION & CERTIFICATIONS</div>
-        <ul class="highlights">
-            <li>Bachelor's in Computer Science — University (2016)</li>
-            <li>Certifications: Oracle Cloud Foundations (target), Microsoft Certified: Data Analyst Associate (Power BI), AWS Solutions Architect (target)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <div class="section-title">TOOLS & TECHNOLOGIES</div>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <div class="skill-category-title">Languages</div>
-                <ul class="skill-list">
-                    <li>Python, SQL, DAX</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Data & ETL</div>
-                <ul class="skill-list">
-                    <li>Spark, ODI, OCI Data Integration, ADF, dbt</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Analytics & BI</div>
-                <ul class="skill-list">
-                    <li>Power BI, Tableau, OAS/OBIEE, Oracle ADW</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Cloud & Infrastructure</div>
-                <ul class="skill-list">
-                    <li>OCI, AWS, Azure; Storage, Compute, Networking, Security</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Databases</div>
-                <ul class="skill-list">
-                    <li>Oracle ADW, PostgreSQL, Snowflake</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Development</div>
-                <ul class="skill-list">
-                    <li>Django, FastAPI, React, REST APIs, Git, CI/CD</li>
-                </ul>
+    <div class="container">
+        <div class="header">
+            <div class="name">Pratik Kumar Kale</div>
+            <div class="title">AI Solutions Engineer | Strategy — Data & Analytics</div>
+            <div class="contact-info">
+                Hyderabad, Telangana, India • kpratik64@gmail.com • +91-8919052874<br>
+                <a href="https://www.linkedin.com/in/pratik-kumar-kale/">LinkedIn</a> • 
+                <a href="https://github.com/kpratik64">GitHub</a> • 
+                <a href="https://kpratik64.github.io/my-portfolio/">Portfolio</a>
             </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section-title">AWARDS & RECOGNITION</div>
-        <ul class="highlights">
-            <li>Excellence in Data Engineering — ITechVersity Solutions, 2023</li>
-            <li>Best Performance Award — INFOLOB Engagement, 2024</li>
-            <li>Innovation in Cloud Architecture — Oracle Partner Network, 2024</li>
-        </ul>
-    </div>
+        <div class="section">
+            <div class="section-title">Executive Summary</div>
+            <div class="summary">
+                I help teams build AI‑enabled decision systems — reliable platforms, governed data, and fast, useful insights. Outcomes first; lean standards; sleeves‑rolled‑up execution (LLM/RAG prototypes, shaping SQL models, and performance fixes). 8+ years across data engineering, analytics, and BI with measurable wins in cost, reliability, and adoption.
+            </div>
+            <div class="leadership-areas">
+                <div class="leadership-area">Data Platform Architecture</div>
+                <div class="leadership-area">AI & Analytics Strategy</div>
+                <div class="leadership-area">Performance & Cost Optimization</div>
+                <div class="leadership-area">Team Leadership & Mentorship</div>
+                <div class="leadership-area">Business-Technology Translation</div>
+            </div>
+        </div>
 
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="company-header">
+                    <div>
+                        <span class="company-name">INFOLOB</span>
+                        <span class="company-location">Hyderabad, India</span>
+                    </div>
+                    <div class="company-duration">Oct 2024 — Present</div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Lead Data Analytics Engineer</div>
+                        <div class="role-duration">Oct 2024 — Present</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Drive analytics engineering and Power BI initiatives; mentor teams and improve platform reliability.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-header">
+                    <div>
+                        <span class="company-name">ITVersity, Inc.</span>
+                        <span class="company-location">Hyderabad, India</span>
+                    </div>
+                    <div class="company-duration">Jul 2023 — Oct 2024</div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Senior Analytics Engineer</div>
+                        <div class="role-duration">Apr 2024 — Oct 2024</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Led enterprise Power BI rollouts (gateway, RLS, native connectors) and API automations for refresh/ops.</li>
+                            <li>Directed AWS → OCI data lake migration (Cloudera → ADW) with rigorous SQL validation and performance tuning.</li>
+                            <li>Partnered with DE teams across Glue, OCI DI, ADF, and Airflow; reviewed models and mentored juniors.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Associate Data Engineer</div>
+                        <div class="role-duration">Jul 2023 — Mar 2024</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Built dashboards and semantic models; implemented AD/RLS and gateway basics for secure access.</li>
+                            <li>Supported data lake migration tasks and SQL data validation; contributed to refresh optimization.</li>
+                            <li>Learned CI/CD and Git workflows; documented runbooks and supported stakeholder demos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-header">
+                    <div>
+                        <span class="company-name">Elevate X</span>
+                        <span class="company-location">Hyderabad, India</span>
+                    </div>
+                    <div class="company-duration">Dec 2020 — Jun 2023</div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Deputy General Manager — Data Analytics Transition</div>
+                        <div class="role-duration">Dec 2020 — Jun 2023</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Led transition from sales to data‑driven operations; built Power BI dashboards aligned to business objectives.</li>
+                            <li>Integrated AD and RLS; trained users on storytelling; optimized performance and governed gateways.</li>
+                            <li>Career shift: mapped business expectations to technical requirements, bridging sales leadership with analytics engineering.</li>
+                            <li>Translated KPIs into semantic models and governed datasets; defined metrics and access patterns adopted by business teams.</li>
+                            <li>Partnered with data engineers to shape pipelines and data contracts, enabling reliable refreshes and trust in numbers.</li>
+                            <li>Drove adoption via enablement sessions, documentation, and feedback loops — foundation for moving full‑time into IT.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-header">
+                    <div>
+                        <span class="company-name">HomeLane</span>
+                        <span class="company-location">Hyderabad, Telangana</span>
+                    </div>
+                    <div class="company-duration">Jan 2019 — Dec 2020</div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Assistant Sales Manager</div>
+                        <div class="role-duration">Aug 2019 — Dec 2020</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Built top‑performing unit; sustained ~15% conversion ratio; introduced Excel dashboards for decision support.</li>
+                            <li>Made Banjara Hills unit #1 PAN‑India within four months through pipeline hygiene and coaching.</li>
+                            <li>Grew sales order book consistently by focusing on qualification, follow‑ups, and objection handling.</li>
+                            <li>Strengthened customer empathy and handover rituals to improve post‑sale satisfaction and referrals.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Field Sales Manager</div>
+                        <div class="role-duration">Jan 2019 — Aug 2019</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Generated ₹1 Cr in a month; led a 20‑member team; boosted meeting success 65% → 90%.</li>
+                            <li>Increased structured channel meetings by ~300% in one quarter; improved discipline and cadence.</li>
+                            <li>Coached field reps on discovery and solution framing; improved conversion quality and cycle time.</li>
+                            <li>Recognized as Best Field Sales Manager for consistent goal attainment and team development.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-header">
+                    <div>
+                        <span class="company-name">Amazon</span>
+                        <span class="company-location">India</span>
+                    </div>
+                    <div class="company-duration">Jun 2016 — Dec 2018</div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Team Lead</div>
+                        <div class="role-duration">Jun 2017 — Dec 2018</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Improved team productivity by ~20% via workflow optimization and coaching; resolved escalations.</li>
+                            <li>Reduced completion time ~15% by streamlining queues and clarifying SOPs.</li>
+                            <li>Lifted team morale ~25% with clear goals, recognition, and regular feedback loops.</li>
+                            <li>Built leadership habits: stakeholder comms, conflict resolution, and bias‑for‑action under pressure.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="role-item">
+                    <div class="role-header">
+                        <div class="role-title">Senior Customer Service Associate</div>
+                        <div class="role-duration">Jun 2016 — May 2017</div>
+                    </div>
+                    <div class="role-description">
+                        <ul>
+                            <li>Maintained ~95% CSAT; implemented CRM improvements reducing response time by ~20%.</li>
+                            <li>Handled ~50 inquiries/day within SLAs; analyzed trends to cut repeat issues by ~15%.</li>
+                            <li>Built empathy and customer‑first problem solving; set the base for leadership in later roles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Projects</div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">AWS → OCI Data Lake Migration</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Cross‑cloud move for a multinational FMCG: staged cutover, tiered storage, ADW federation. Enterprise Power BI with gateway/RLS and API automations for refresh & ops. ~30% lower cost, 99.9% pipeline uptime.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">ITVCMS Platform</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Training ops platform with auth, mentor mapping, and integrations for Udemy and YouTube metadata.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Oracle Analytics Server on OCI (Logistics)</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Upgrade journey: OBIEE 10g → OAS on OCI with hardened networking, automated deploys, RCU setup, and catalog migration for a PAN‑India logistics firm.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">RAG Chatbot PoC on OCI</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Multi‑lingual retrieval with vector search, prompt safety, and observability hooks; applied only where it adds value.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Google Workspace Automations (In‑house CRM)</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">End‑to‑end lead pipeline: Forms → Sheets segmentation by stage, lead routing, calendar sync, and notifications with Apps Script — lightweight in‑house CRM.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Odoo Partnership Implementations</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Partnered to implement Odoo for multiple customers. Converted business workflows into technical processes, data pipelines, and reporting.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">OCI Data Lake for Pharma (Greenfield)</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Data warehouse to monitor drug development lifecycle with FDA compliance. ODI for ETL, Tableau for realtime monitoring, Python automations, Tableau APIs for metadata & logging.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">dbt Enablement — BFSI (3‑week)</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Hands‑on enablement for a large BFSI on dbt best practices: Git workflows, tests, lineage, environments, and CI.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Redshift ELT with dbt — Modernization (BFSI)</div>
+                    <a href="https://kpratik64.github.io/my-portfolio/#projects" class="project-link">View Project</a>
+                </div>
+                <div class="project-description">Leaping from S3 → EMR → Redshift ETL to dbt + Redshift ELT: zero EMR overhead, faster delivery, lower costs, governance built‑in, and future‑ready platform.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">AI & Machine Learning</div>
+                    <ul class="skill-list">
+                        <li>LLM Integration, RAG (Retrieval-Augmented Generation), Vector Databases, AI/ML Pipelines, Natural Language Processing, Prompt Engineering, AI Model Deployment</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Cloud & Infrastructure</div>
+                    <ul class="skill-list">
+                        <li>Oracle Cloud (OCI), AWS, Azure, Linux, Docker, VPC/VCN, IAM, Kubernetes, Serverless Computing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Data & ETL</div>
+                    <ul class="skill-list">
+                        <li>SQL, Python, Spark, ODI, OCI Data Integration, ADF, dbt, Airflow, Power Query, Data Pipeline Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Analytics & BI</div>
+                    <ul class="skill-list">
+                        <li>Power BI, Tableau, OAS/OBIEE, Oracle ADW, RAG (PoC), DAX, Semantic Models, Row‑Level Security (RLS), Gateway & Subscriptions, Paginated Reports, Performance Tuning, Storytelling & Enablement</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Applications & Development</div>
+                    <ul class="skill-list">
+                        <li>Django, FastAPI, React, REST APIs, Apps Script, Git, CI/CD, Microservices Architecture</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Data Warehouses & Databases</div>
+                    <ul class="skill-list">
+                        <li>Oracle ADW, Amazon Redshift, PostgreSQL, Vector Databases, NoSQL Databases</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Governance & Operations</div>
+                    <ul class="skill-list">
+                        <li>Semantic Models, Row‑Level Security (RLS), Gateways & Access Patterns, Data Contracts & Testing, Lineage & Monitoring, Performance & Cost Guardrails, Data Quality Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="education-degree">Bachelor of Technology in Computer Science</div>
+                <div class="education-school">JNTU Hyderabad</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="languages">
+                <div class="language-item">English <span class="language-level">(Professional)</span></div>
+                <div class="language-item">Hindi <span class="language-level">(Native)</span></div>
+                <div class="language-item">Telugu <span class="language-level">(Conversational)</span></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
