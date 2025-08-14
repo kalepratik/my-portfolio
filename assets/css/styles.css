@@ -45,7 +45,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1001; /* highest z-index to stay on top */
   border-bottom: 1px solid rgb(var(--border) / 0.6);
   background: rgb(var(--background) / 0.7);
   backdrop-filter: blur(10px);
@@ -567,9 +567,17 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
 .projects-filters {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 1.5rem;
   align-items: center;
+}
+
+.filter-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-label {
@@ -639,10 +647,10 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
 }
 .dark .tech-toggle { background: rgb(var(--card) / 0.2); box-shadow: 0 0 0 1px rgb(var(--border) / 0.6) inset; }
 .tech-menu {
-  position: absolute; right: 0; top: calc(100% + 0.5rem);
+  position: absolute; left: 0; top: calc(100% + 0.5rem);
   background: rgb(var(--background)); color: rgb(var(--foreground));
-  border: 1px solid rgb(var(--border)); border-radius: 0.75rem; padding: 0.5rem;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); width: min(90vw, 320px);
+  border: 1px solid rgb(var(--border)); border-radius: 0.75rem; padding: 0.75rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); width: min(calc(100vw - 2rem), 240px);
   max-height: 360px; overflow-y: auto; -webkit-overflow-scrolling: touch;
   z-index: 20;
 }
@@ -650,9 +658,9 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
 .tech-filter * { pointer-events: auto; }
 .tech-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
 .tech-item {
-  padding: 0.4rem 0.6rem; border: 1px solid rgb(var(--border)); border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem; border: 1px solid rgb(var(--border)); border-radius: 0.75rem;
   background: rgb(var(--background)); color: rgb(var(--foreground)); cursor: pointer; font-size: 0.875rem;
-  width: 100%; text-align: left;
+  width: 100%; text-align: left; word-wrap: break-word; white-space: normal;
 }
 .tech-item:hover { background: rgb(var(--muted)); }
 
@@ -969,6 +977,58 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
   text-decoration: underline;
 }
 
+/* Small-screen fixes */
+@media (max-width: 767px) {
+  /* Make the hamburger menu actually render so the JS slide-in works */
+  .nav-menu {
+    display: flex; /* base CSS hides it; keep it rendered off-canvas for slide animation */
+    z-index: 999; /* below navbar (z-index: 1001) */
+  }
+
+  /* Keep the filters usable on mobile */
+  .projects-filters {
+    position: relative;
+    z-index: 60;
+  }
+
+  #tagFilter {
+    width: 100%;
+    max-width: 18rem;
+    position: relative;
+    z-index: 60;
+  }
+
+  /* When menu is active, slide it in */
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Hamburger animation when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Mobile-specific tech filter dropdown improvements */
+  .tech-menu {
+    left: 0;
+    width: min(calc(100vw - 2rem), 200px);
+    max-width: calc(100vw - 2rem);
+  }
+  
+  .tech-item {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
   .nav-menu {
@@ -994,16 +1054,17 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
   .section-header { flex-direction: row; align-items: end; justify-content: space-between; }
   
   .projects-filters {
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
 
-  /* Push filter controls to the right side on desktop */
-  .projects-filters .filter-label { margin-left: auto; }
-  .projects-filters #tagFilter { margin-left: 0.5rem; }
-  .projects-filters .btn-reset { margin-left: 0.5rem; }
+  .filter-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
   
   .footer-content {
     flex-direction: row;
