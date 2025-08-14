@@ -510,6 +510,12 @@ body {
   color: rgb(var(--primary));
 }
 
+.role-marker--plain {
+  background: rgb(var(--primary));
+  border-color: rgb(var(--primary));
+  color: transparent;
+}
+
 .role-title {
   font-weight: 600;
 }
@@ -531,6 +537,8 @@ body {
   padding: 0.15rem 0.5rem;
   border-radius: 9999px;
 }
+
+.previous-roles { margin-top: 0.5rem; }
 
 /* Projects */
 .projects-filters {
