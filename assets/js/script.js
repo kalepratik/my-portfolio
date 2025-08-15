@@ -159,17 +159,36 @@ function initTheme() {
   
   document.documentElement.classList.toggle('dark', isDark);
   updateThemeIcon(isDark);
+  updateFavicon(isDark);
 }
 
 function toggleTheme() {
   const isDark = document.documentElement.classList.toggle('dark');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
   updateThemeIcon(isDark);
+  updateFavicon(isDark);
 }
 
 function updateThemeIcon(isDark) {
   const icon = themeToggle.querySelector('i');
   icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+function updateFavicon(isDark) {
+  const mode = isDark ? 'dark' : 'light';
+  const faviconLinks = document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]');
+  
+  faviconLinks.forEach(link => {
+    if (link.href.includes('favicon_io')) {
+      const currentMode = link.href.includes('dark mode') ? 'dark' : 'light';
+      if (currentMode !== mode) {
+        link.href = link.href.replace(
+          currentMode === 'dark' ? 'dark mode' : 'light mode',
+          mode === 'dark' ? 'dark mode' : 'light mode'
+        );
+      }
+    }
+  });
 }
 
 // Project Filtering
