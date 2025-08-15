@@ -781,7 +781,7 @@ details[open] .previous-summary .toggle::before { content: '\2212'; }
 }
 
 .project-links {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
