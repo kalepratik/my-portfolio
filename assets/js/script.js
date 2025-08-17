@@ -15,21 +15,21 @@ const projects = [
     icon: 'fas fa-laptop-code'
   },
   {
-    title: "Oracle Analytics Server on OCI (Logistics)",
+    title: "Oracle Analytics Server on OCI for Logistics",
     summary: "Upgrade journey: OBIEE 10g → OAS on OCI with hardened networking, automated deploys, RCU setup, and catalog migration for a PAN‑India logistics firm.",
     tags: ["OAS", "OBIEE", "RCU", "Linux", "OCI", "Logistics"],
     links: [{ href: "https://github.com/kpratik64", label: "Runbook" }],
     icon: 'fas fa-chart-line'
   },
   {
-    title: "RAG Chatbot PoC on OCI",
+    title: "RAG Chatbot on OCI",
     summary: "Multi‑lingual retrieval with vector search, prompt safety, and observability hooks; applied only where it adds value.",
     tags: ["RAG", "Vector DB", "LLM", "OCI"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
     icon: 'fas fa-robot'
   },
   {
-    title: "Google Workspace Automations (In‑house CRM)",
+    title: "Google Workspace Automations",
     summary: "End‑to‑end lead pipeline: Forms → Sheets segmentation by stage, lead routing, calendar sync, and notifications with Apps Script — lightweight in‑house CRM.",
     tags: ["Apps Script", "Sheets", "Gmail", "Calendar", "CRM"],
     links: [{ href: "https://github.com/kpratik64", label: "Samples" }],
@@ -43,7 +43,7 @@ const projects = [
     icon: 'fas fa-toolbox'
   },
   {
-    title: "OCI Data Lake for Pharma (Greenfield)",
+    title: "OCI Data Lake for Pharma",
     summary: "Data warehouse to monitor drug development lifecycle with FDA compliance. ODI for ETL, Tableau for realtime monitoring, Python automations, Tableau APIs for metadata & logging.",
     tags: ["OCI", "ODI", "Tableau", "Python", "Pharma"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
