@@ -61,7 +61,8 @@ const projects = [
     summary: "Leaping from S3 → EMR → Redshift ETL to dbt + Redshift ELT: zero EMR overhead, faster delivery, lower costs, governance built‑in, and future‑ready platform.",
     tags: ["AWS", "Redshift", "dbt", "ELT", "BFSI"],
     links: [{ href: "https://github.com/kpratik64", label: "Solution Notes" }],
-    icon: 'fas fa-rocket'
+    icon: 'fas fa-rocket',
+    hidden: true
   }
 ];
 
@@ -254,6 +255,9 @@ function filterProjects() {
   const selectedTag = (selectedTagRaw || '').toLowerCase();
   
   const filtered = projects.filter(project => {
+    // Skip hidden projects
+    if (project.hidden) return false;
+    
     const matchesQuery = !query || 
       project.title.toLowerCase().includes(query) ||
       project.summary.toLowerCase().includes(query) ||
