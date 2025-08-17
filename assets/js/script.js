@@ -2,15 +2,15 @@
 const projects = [
   {
     title: "AWS → OCI Data Lake Migration",
-    summary: "Cross‑cloud move for a multinational FMCG: staged cutover, tiered storage, ADW federation. Enterprise Power BI with gateway/RLS and API automations for refresh & ops. ~30% lower cost, 99.9% pipeline uptime.",
-    tags: ["OCI", "AWS", "ADW", "Object Storage", "Data Lake", "Power BI", "APIs"],
+    summary: "Cross‑cloud move for a multinational FMCG: staged cutover, tiered storage, Oracle ADW federation. Enterprise Power BI with gateway/RLS and API automations for refresh & ops. ~30% lower cost, 99.9% pipeline uptime.",
+    tags: ["OCI", "AWS", "Oracle ADW", "Object Storage", "Data Lake", "Power BI", "APIs"],
     links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }],
     icon: 'fas fa-cloud'
   },
   {
     title: "ITVCMS Platform",
     summary: "Training ops platform with auth, mentor mapping, and integrations for Udemy and YouTube metadata.",
-    tags: ["Django", "React", "Postgres", "OAuth2"],
+    tags: ["Django", "React", "PostgreSQL", "OAuth 2.0"],
     links: [{ href: "https://github.com/kpratik64", label: "Repo" }],
     icon: 'fas fa-laptop-code'
   },
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "RAG Chatbot on OCI",
     summary: "Multi‑lingual retrieval with vector search, prompt safety, and observability hooks; applied only where it adds value.",
-    tags: ["RAG", "Vector DB", "LLM", "OCI"],
+    tags: ["RAG", "Vector Database", "LLM", "OCI"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
     icon: 'fas fa-robot'
   },
@@ -58,8 +58,8 @@ const projects = [
   },
   {
     title: "GCP Data Warehouse for Insurance Analytics",
-    summary: "Led as Solutions Architect: GCS ingestion via GSUTIL, BigQuery external tables, dbt medallion architecture, Superset self-service analytics, Cloud Composer orchestration, SCD2 modeling, and comprehensive testing framework.",
-    tags: ["GCP", "BigQuery", "dbt", "Superset", "Cloud Composer", "Insurance", "SCD2"],
+    summary: "Led as Solutions Architect: GCS ingestion via gsutil, BigQuery external tables, dbt medallion architecture, Apache Superset self-service analytics, Cloud Composer orchestration, SCD Type 2 modeling, and comprehensive testing framework.",
+    tags: ["GCP", "BigQuery", "dbt", "Apache Superset", "Cloud Composer", "Insurance", "SCD Type 2"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
     icon: 'fas fa-database'
   },
