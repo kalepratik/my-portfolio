@@ -2,66 +2,74 @@
 const projects = [
   {
     title: "AWS → OCI Data Lake Migration",
-    summary: "Cross‑cloud move for a multinational FMCG: staged cutover, tiered storage, ADW federation. Enterprise Power BI with gateway/RLS and API automations for refresh & ops. ~30% lower cost, 99.9% pipeline uptime.",
-    tags: ["OCI", "AWS", "ADW", "Object Storage", "Data Lake", "Power BI", "APIs"],
+    summary: "AI-first cross‑cloud migration for multinational FMCG: intelligent data discovery, automated tiered storage optimization, Oracle ADW federation with AI-powered cost optimization. Enterprise Power BI with AI features, gateway/RLS, and intelligent API automations. ~30% lower cost, 99.9% pipeline uptime.",
+    tags: ["OCI", "AWS", "Oracle ADW", "Power BI", "APIs", "AI Tools"],
     links: [{ href: "https://github.com/kpratik64", label: "Case Notes" }],
     icon: 'fas fa-cloud'
   },
   {
     title: "ITVCMS Platform",
-    summary: "Training ops platform with auth, mentor mapping, and integrations for Udemy and YouTube metadata.",
-    tags: ["Django", "React", "Postgres", "OAuth2"],
+    summary: "AI-first training operations platform with intelligent mentor matching, automated content curation, and smart integrations for Udemy and YouTube metadata. Features AI-powered learning path recommendations and automated analytics for training effectiveness.",
+    tags: ["Django", "React", "PostgreSQL", "OAuth 2.0", "AI Tools"],
     links: [{ href: "https://github.com/kpratik64", label: "Repo" }],
     icon: 'fas fa-laptop-code'
   },
   {
-    title: "Oracle Analytics Server on OCI (Logistics)",
+    title: "Oracle Analytics Server on OCI for Logistics",
     summary: "Upgrade journey: OBIEE 10g → OAS on OCI with hardened networking, automated deploys, RCU setup, and catalog migration for a PAN‑India logistics firm.",
-    tags: ["OAS", "OBIEE", "RCU", "Linux", "OCI", "Logistics"],
+    tags: ["OAS", "OBIEE", "Linux", "OCI"],
     links: [{ href: "https://github.com/kpratik64", label: "Runbook" }],
     icon: 'fas fa-chart-line'
   },
   {
-    title: "RAG Chatbot PoC on OCI",
-    summary: "Multi‑lingual retrieval with vector search, prompt safety, and observability hooks; applied only where it adds value.",
-    tags: ["RAG", "Vector DB", "LLM", "OCI"],
+    title: "RAG Chatbot on OCI",
+    summary: "AI-first multi‑lingual RAG chatbot with intelligent vector search, context-aware responses, prompt safety, and comprehensive observability. Features automated sentiment analysis, intent recognition, and continuous learning capabilities for enterprise knowledge management.",
+    tags: ["RAG", "Vector Database", "LLM", "OCI", "AI Tools", "NLP"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
     icon: 'fas fa-robot'
   },
   {
-    title: "Google Workspace Automations (In‑house CRM)",
-    summary: "End‑to‑end lead pipeline: Forms → Sheets segmentation by stage, lead routing, calendar sync, and notifications with Apps Script — lightweight in‑house CRM.",
-    tags: ["Apps Script", "Sheets", "Gmail", "Calendar", "CRM"],
+    title: "Google Workspace Automations",
+    summary: "AI-first end‑to‑end lead pipeline with intelligent lead scoring, automated segmentation, smart routing, automated follow-up scheduling, and intelligent notifications. Features AI-driven lead qualification and automated response generation for enhanced conversion rates.",
+    tags: ["Apps Script", "Sheets", "Gmail", "Calendar", "AI Tools"],
     links: [{ href: "https://github.com/kpratik64", label: "Samples" }],
     icon: 'fas fa-gears'
   },
   {
     title: "Odoo Partnership Implementations",
     summary: "Partnered to implement Odoo for multiple customers. Converted business workflows into technical processes, data pipelines, and reporting.",
-    tags: ["Odoo", "ETL", "Analytics", "Workflows"],
+    tags: ["Odoo", "ETL"],
     links: [{ href: "https://github.com/kpratik64", label: "Toolkit" }],
     icon: 'fas fa-toolbox'
   },
   {
-    title: "OCI Data Lake for Pharma (Greenfield)",
-    summary: "Data warehouse to monitor drug development lifecycle with FDA compliance. ODI for ETL, Tableau for realtime monitoring, Python automations, Tableau APIs for metadata & logging.",
-    tags: ["OCI", "ODI", "Tableau", "Python", "Pharma"],
+    title: "OCI Data Lake for Pharma",
+    summary: "AI-first pharmaceutical data lake with intelligent drug development lifecycle monitoring, FDA compliance automation, automated clinical trial analytics, and real-time safety monitoring. Features AI-powered drug efficacy analysis and automated regulatory reporting with Tableau Einstein AI.",
+    tags: ["OCI", "ODI", "Tableau", "Python", "AI Tools"],
     links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
     icon: 'fas fa-prescription-bottle'
   },
   {
     title: "dbt Enablement — BFSI (3‑week)",
     summary: "Hands‑on enablement for a large BFSI on dbt best practices: Git workflows, tests, lineage, environments, and CI.",
-    tags: ["dbt", "BFSI", "Enablement"],
+    tags: ["dbt"],
     links: [{ href: "https://github.com/kpratik64", label: "Curriculum" }],
     icon: 'fas fa-chalkboard-teacher'
+  },
+  {
+    title: "GCP Data Warehouse for Insurance Analytics",
+    summary: "AI-first insurance analytics platform with intelligent risk assessment, automated claims modeling, automated fraud detection, and smart customer segmentation. Features AI-powered pricing optimization, real-time risk scoring, and automated regulatory compliance with comprehensive testing framework.",
+    tags: ["GCP", "BigQuery", "dbt", "Apache Superset", "Cloud Composer", "SCD Type 2", "AI Tools"],
+    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
+    icon: 'fas fa-database'
   },
   {
     title: "Redshift ELT with dbt — Modernization (BFSI)",
     summary: "Leaping from S3 → EMR → Redshift ETL to dbt + Redshift ELT: zero EMR overhead, faster delivery, lower costs, governance built‑in, and future‑ready platform.",
     tags: ["AWS", "Redshift", "dbt", "ELT", "BFSI"],
     links: [{ href: "https://github.com/kpratik64", label: "Solution Notes" }],
-    icon: 'fas fa-rocket'
+    icon: 'fas fa-rocket',
+    hidden: true
   }
 ];
 
@@ -254,6 +262,9 @@ function filterProjects() {
   const selectedTag = (selectedTagRaw || '').toLowerCase();
   
   const filtered = projects.filter(project => {
+    // Skip hidden projects
+    if (project.hidden) return false;
+    
     const matchesQuery = !query || 
       project.title.toLowerCase().includes(query) ||
       project.summary.toLowerCase().includes(query) ||
