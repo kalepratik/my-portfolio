@@ -57,6 +57,13 @@ const projects = [
     icon: 'fas fa-chalkboard-teacher'
   },
   {
+    title: "GCP Data Warehouse for Insurance Analytics",
+    summary: "Led as Solutions Architect: GCS ingestion via GSUTIL, BigQuery external tables, dbt medallion architecture, Superset self-service analytics, Cloud Composer orchestration, SCD2 modeling, and comprehensive testing framework.",
+    tags: ["GCP", "BigQuery", "dbt", "Superset", "Cloud Composer", "Insurance", "SCD2"],
+    links: [{ href: "https://github.com/kpratik64", label: "Architecture" }],
+    icon: 'fas fa-database'
+  },
+  {
     title: "Redshift ELT with dbt — Modernization (BFSI)",
     summary: "Leaping from S3 → EMR → Redshift ETL to dbt + Redshift ELT: zero EMR overhead, faster delivery, lower costs, governance built‑in, and future‑ready platform.",
     tags: ["AWS", "Redshift", "dbt", "ELT", "BFSI"],
