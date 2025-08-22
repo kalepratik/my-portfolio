@@ -1,6 +1,6 @@
 # Pratik Kumar Kale - Professional Portfolio Website
 
-A modern, responsive portfolio website. Live: https://kpratik64.github.io/my-portfolio/
+A modern, responsive portfolio website. Live: https://kalepratik.github.io/my-portfolio/
 
 ## 🚀 Features
 

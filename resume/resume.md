@@ -2,7 +2,7 @@
 
 AI Solutions Engineer | Strategy — Data & Analytics  
 Hyderabad, Telangana, India • kpratik64@gmail.com • +91-8919052874  
-[LinkedIn](https://www.linkedin.com/in/pratik-kumar-kale/) • [GitHub](https://github.com/kpratik64) • [Portfolio](https://kpratik64.github.io/my-portfolio/)
+[LinkedIn](https://www.linkedin.com/in/pratik-kumar-kale/) • [GitHub](https://github.com/kalepratik) • [Portfolio](https://kalepratik.github.io/my-portfolio/)
 
 ---
 
