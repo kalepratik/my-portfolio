@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kalepratik.github.io/my-portfolio/sitemap.xml
+Sitemap: https://portfolio.kalepratik.in/sitemap.xml
 
 
