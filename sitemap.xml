@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kalepratik.github.io/my-portfolio/</loc>
+    <loc>https://portfolio.kalepratik.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kalepratik.github.io/my-portfolio/#about</loc>
+    <loc>https://portfolio.kalepratik.in/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kalepratik.github.io/my-portfolio/#experience</loc>
+    <loc>https://portfolio.kalepratik.in/#experience</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kalepratik.github.io/my-portfolio/#projects</loc>
+    <loc>https://portfolio.kalepratik.in/#projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kalepratik.github.io/my-portfolio/#skills</loc>
+    <loc>https://portfolio.kalepratik.in/#skills</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kalepratik.github.io/my-portfolio/#contact</loc>
+    <loc>https://portfolio.kalepratik.in/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
