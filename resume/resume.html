@@ -92,6 +92,35 @@
             padding-bottom: 5px;
         }
         
+        .section-header-with-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .section-header-with-button .section-title {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .portfolio-button {
+            font-size: 8pt;
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 4px 8px;
+            background: #ffffff;
+            border-radius: 3px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+        
+        .portfolio-button:hover {
+            background: #2d3748;
+            color: #ffffff;
+        }
+        
         /* Executive Summary */
         .summary {
             font-size: 10pt;
@@ -115,6 +144,26 @@
             font-size: 8pt;
             font-weight: 400;
             border: 1px solid #e2e8f0;
+        }
+        
+        .metrics {
+            background: #ecfdf5;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+            border-left: 3px solid #10b981;
+        }
+        
+        .metrics-title {
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 4px;
+            font-size: 9pt;
+        }
+        
+        .metrics-text {
+            color: #047857;
+            font-size: 8pt;
         }
         
         /* Experience Section */
@@ -196,6 +245,11 @@
             line-height: 1.3;
         }
         
+        .highlight {
+            font-weight: 600;
+            color: #1a202c;
+        }
+        
         /* Projects Section */
         .project-item {
             margin-bottom: 8px;
@@ -217,23 +271,6 @@
             font-weight: 500;
             font-size: 10pt;
             color: #1a202c;
-        }
-        
-        .project-link {
-            font-size: 8pt;
-            color: #2d3748;
-            text-decoration: none;
-            font-weight: 400;
-            padding: 2px 5px;
-            background: #ffffff;
-            border-radius: 3px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.2s ease;
-        }
-        
-        .project-link:hover {
-            background: #2d3748;
-            color: #ffffff;
         }
         
         .project-description {
@@ -328,6 +365,32 @@
             font-weight: 400;
         }
         
+        .website-link {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            border: 1px dashed #cbd5e1;
+        }
+        
+        .website-link p {
+            font-size: 9pt;
+            color: #4a5568;
+            margin-bottom: 4px;
+        }
+        
+        .website-link a {
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 9pt;
+        }
+        
+        .website-link a:hover {
+            text-decoration: underline;
+        }
+        
         /* Print Styles */
         @media print {
             body {
@@ -345,12 +408,6 @@
                 border: 1px solid #e2e8f0;
                 margin-bottom: 8px;
                 padding: 6px;
-            }
-            
-            .project-item {
-                border: 1px solid #e2e8f0;
-                margin-bottom: 6px;
-                padding: 5px;
             }
             
             .skill-category {
@@ -373,21 +430,9 @@
                 font-size: 7pt;
             }
             
-            .project-link {
-                background: #ffffff;
-                color: #2d3748;
-                border: 1px solid #e2e8f0;
-                padding: 1px 3px;
-                font-size: 7pt;
-            }
-            
             .role-description li {
                 font-size: 8pt;
                 margin-bottom: 1px;
-            }
-            
-            .project-description {
-                font-size: 8pt;
             }
             
             .skill-list li {
@@ -402,12 +447,6 @@
             }
             
             .company-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-            
-            .project-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
@@ -431,14 +470,18 @@
         <div class="section">
             <div class="section-title">Executive Summary</div>
             <div class="summary">
-                I help teams build AI‑enabled decision systems — reliable platforms, governed data, and fast, useful insights. Outcomes first; lean standards; sleeves‑rolled‑up execution (LLM/RAG prototypes, shaping SQL models, and performance fixes). 8+ years across data engineering, analytics, and BI with measurable wins in cost, reliability, and adoption.
+                8+ years progressing from people leadership to hands‑on technical delivery, now focused on Python‑first data engineering and multi‑cloud platforms (AWS, Azure, GCP). Led end‑to‑end builds of analytics platforms, production‑grade data pipelines, and AI‑enabled services with strong governance, security, and cost controls.
+            </div>
+            <div class="metrics">
+                <div class="metrics-title">Key Metrics:</div>
+                <div class="metrics-text">40%+ pipeline performance gains, ~30% infra cost savings, 99.9% uptime SLAs; delivered cross‑cloud migrations and standardized CI/CD & IaC (Terraform) across AWS, Azure, and GCP.</div>
             </div>
             <div class="leadership-areas">
-                <div class="leadership-area">Data Platform Architecture</div>
-                <div class="leadership-area">AI & Analytics Strategy</div>
-                <div class="leadership-area">Performance & Cost Optimization</div>
-                <div class="leadership-area">Team Leadership & Mentorship</div>
+                <div class="leadership-area">People Management & Team Building</div>
+                <div class="leadership-area">Practice Development & Scaling</div>
+                <div class="leadership-area">Technical Leadership & Delivery</div>
                 <div class="leadership-area">Business-Technology Translation</div>
+                <div class="leadership-area">AI-Powered Analytics Strategy</div>
             </div>
         </div>
 
@@ -460,7 +503,9 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Drive analytics engineering and Power BI initiatives; mentor teams and improve platform reliability.</li>
+                            <li><span class="highlight">Practice Leadership:</span> Built Python‑based data engineering standards, CI/CD, and IaC (Terraform) across AWS, Azure, and GCP</li>
+                            <li><span class="highlight">Team Nurturing:</span> Mentoring 8+ engineers on Python, dbt, Airflow, Docker/Kubernetes, and cloud security/IAM</li>
+                            <li><span class="highlight">Technical Delivery:</span> Delivered analytics and AI workloads on S3/Glue/Lambda, ADF/Synapse, and BigQuery/Composer with 99.9% uptime</li>
                         </ul>
                     </div>
                 </div>
@@ -481,9 +526,9 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Led enterprise Power BI rollouts (gateway, RLS, native connectors) and API automations for refresh/ops.</li>
-                            <li>Directed AWS → OCI data lake migration (Cloudera → ADW) with rigorous SQL validation and performance tuning.</li>
-                            <li>Partnered with DE teams across Glue, OCI DI, ADF, and Airflow; reviewed models and mentored juniors.</li>
+                            <li><span class="highlight">Technical Excellence:</span> Built Python/SQL pipelines with dbt and Airflow; CI/CD via GitHub Actions; observability with CloudWatch, Azure Monitor, and GCP Cloud Monitoring</li>
+                            <li><span class="highlight">Team Development:</span> Mentored 5+ engineers on Python testing and reviews; standardized documentation and runbooks</li>
+                            <li><span class="highlight">Delivery Leadership:</span> Led cross‑cloud migration (AWS→OCI) and enabled Azure/GCP patterns; +40% performance, 99.9% reliability</li>
                         </ul>
                     </div>
                 </div>
@@ -494,9 +539,9 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Built dashboards and semantic models; implemented AD/RLS and gateway basics for secure access.</li>
-                            <li>Supported data lake migration tasks and SQL data validation; contributed to refresh optimization.</li>
-                            <li>Learned CI/CD and Git workflows; documented runbooks and supported stakeholder demos.</li>
+                            <li><span class="highlight">Technical Foundation:</span> Developed Python ETL jobs and parameterized dbt models; scheduled with Airflow/Composer and ADF</li>
+                            <li><span class="highlight">Process Innovation:</span> Implemented CI/CD, unit tests, and data quality checks; authored operational runbooks</li>
+                            <li><span class="highlight">Skill Development:</span> Strengthened SQL optimization, Python packaging, and cloud storage/compute patterns (S3, ADLS, GCS)</li>
                         </ul>
                     </div>
                 </div>
@@ -505,7 +550,7 @@
             <div class="experience-item">
                 <div class="company-header">
                     <div>
-                        <span class="company-name">Elevate X</span>
+                        <span class="company-name">Elevate X (Khazana Group)</span>
                         <span class="company-location">Hyderabad, India</span>
                     </div>
                     <div class="company-duration">Dec 2020 — Jun 2023</div>
@@ -517,12 +562,10 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Led transition from sales to data‑driven operations; built Power BI dashboards aligned to business objectives.</li>
-                            <li>Integrated AD and RLS; trained users on storytelling; optimized performance and governed gateways.</li>
-                            <li>Career shift: mapped business expectations to technical requirements, bridging sales leadership with analytics engineering.</li>
-                            <li>Translated KPIs into semantic models and governed datasets; defined metrics and access patterns adopted by business teams.</li>
-                            <li>Partnered with data engineers to shape pipelines and data contracts, enabling reliable refreshes and trust in numbers.</li>
-                            <li>Drove adoption via enablement sessions, documentation, and feedback loops — foundation for moving full‑time into IT.</li>
+                            <li><span class="highlight">Career Transformation:</span> Successfully pivoted from people management to technical leadership, bridging business and technology domains</li>
+                            <li><span class="highlight">Practice Building:</span> Built analytics practice; established governance, training programs, and technical standards</li>
+                            <li><span class="highlight">Team Scaling:</span> Led digital transformation initiative, achieving 95% user adoption and 25% operational efficiency improvement</li>
+                            <li><span class="highlight">Technical Delivery:</span> Designed semantic models and partnered on Python‑based pipelines across cloud storage and warehouse layers</li>
                         </ul>
                     </div>
                 </div>
@@ -532,7 +575,7 @@
                 <div class="company-header">
                     <div>
                         <span class="company-name">HomeLane</span>
-                        <span class="company-location">Hyderabad, Telangana</span>
+                        <span class="company-location">Hyderabad, India</span>
                     </div>
                     <div class="company-duration">Jan 2019 — Dec 2020</div>
                 </div>
@@ -543,10 +586,9 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Built top‑performing unit; sustained ~15% conversion ratio; introduced Excel dashboards for decision support.</li>
-                            <li>Made Banjara Hills unit #1 PAN‑India within four months through pipeline hygiene and coaching.</li>
-                            <li>Grew sales order book consistently by focusing on qualification, follow‑ups, and objection handling.</li>
-                            <li>Strengthened customer empathy and handover rituals to improve post‑sale satisfaction and referrals.</li>
+                            <li><span class="highlight">Team Excellence:</span> Built top-performing unit with 15% conversion rate, achieving #1 PAN-India ranking within 4 months</li>
+                            <li><span class="highlight">Process Innovation:</span> Introduced data-driven decision support systems and Excel dashboards for operational efficiency</li>
+                            <li><span class="highlight">Customer Focus:</span> Strengthened customer empathy and handover processes, improving post-sale satisfaction and referrals</li>
                         </ul>
                     </div>
                 </div>
@@ -557,10 +599,9 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Generated ₹1 Cr in a month; led a 20‑member team; boosted meeting success 65% → 90%.</li>
-                            <li>Increased structured channel meetings by ~300% in one quarter; improved discipline and cadence.</li>
-                            <li>Coached field reps on discovery and solution framing; improved conversion quality and cycle time.</li>
-                            <li>Recognized as Best Field Sales Manager for consistent goal attainment and team development.</li>
+                            <li><span class="highlight">Revenue Leadership:</span> Generated ₹1 Cr monthly sales, led 20-member team, boosted meeting success from 65% to 90%</li>
+                            <li><span class="highlight">Team Development:</span> Coached field reps on discovery and solution framing, improving conversion quality and cycle time</li>
+                            <li><span class="highlight">Recognition:</span> Awarded Best Field Sales Manager for consistent goal attainment and team development excellence</li>
                         </ul>
                     </div>
                 </div>
@@ -581,10 +622,9 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Improved team productivity by ~20% via workflow optimization and coaching; resolved escalations.</li>
-                            <li>Reduced completion time ~15% by streamlining queues and clarifying SOPs.</li>
-                            <li>Lifted team morale ~25% with clear goals, recognition, and regular feedback loops.</li>
-                            <li>Built leadership habits: stakeholder comms, conflict resolution, and bias‑for‑action under pressure.</li>
+                            <li><span class="highlight">People Management:</span> Improved team productivity by 20% through workflow optimization, coaching, and performance management</li>
+                            <li><span class="highlight">Operational Excellence:</span> Reduced completion time by 15% by streamlining queues, clarifying SOPs, and implementing best practices</li>
+                            <li><span class="highlight">Team Building:</span> Lifted team morale by 25% with clear goals, recognition programs, and regular feedback mechanisms</li>
                         </ul>
                     </div>
                 </div>
@@ -595,9 +635,8 @@
                     </div>
                     <div class="role-description">
                         <ul>
-                            <li>Maintained ~95% CSAT; implemented CRM improvements reducing response time by ~20%.</li>
-                            <li>Handled ~50 inquiries/day within SLAs; analyzed trends to cut repeat issues by ~15%.</li>
-                            <li>Built empathy and customer‑first problem solving; set the base for leadership in later roles.</li>
+                            <li><span class="highlight">Service Excellence:</span> Maintained 95% CSAT, handled 50+ inquiries daily, implemented CRM improvements reducing response time by 20%</li>
+                            <li><span class="highlight">Process Improvement:</span> Analyzed trends to reduce repeat issues by 15%, building foundation for leadership roles</li>
                         </ul>
                     </div>
                 </div>
@@ -605,126 +644,121 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Projects</div>
-                         <div class="project-item">
-                                 <div class="project-header">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Python & Data Engineering</div>
+                    <ul class="skill-list">
+                        <li>Python, PySpark, Pandas, dbt, Airflow/Composer, Terraform, CI/CD (GitHub Actions/Azure DevOps), FastAPI/Flask, Testing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Multi‑Cloud (AWS, Azure, GCP)</div>
+                    <ul class="skill-list">
+                        <li>AWS: S3, Glue, Lambda, EC2, EKS, RDS, Redshift, IAM, CloudWatch</li>
+                        <li>Azure: ADLS, ADF, Synapse, Functions, AKS, Key Vault, Monitor</li>
+                        <li>GCP: GCS, BigQuery, Dataflow, Pub/Sub, GKE, Composer, IAM</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Platforms & Containers</div>
+                    <ul class="skill-list">
+                        <li>Docker, Kubernetes, Serverless, Linux, Networking (VPC/VCN), Secrets & KMS/Key Vault</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Warehouses & Databases</div>
+                    <ul class="skill-list">
+                        <li>BigQuery, Redshift, Oracle ADW, PostgreSQL, MySQL, Vector/NoSQL Databases</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Analytics & BI</div>
+                    <ul class="skill-list">
+                        <li>Power BI, Tableau, OAS/OBIEE, DAX, Semantic Models, RLS, Performance Tuning</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Governance & Observability</div>
+                    <ul class="skill-list">
+                        <li>Data Contracts & Testing, Lineage, Monitoring/Alerting (CloudWatch, Azure Monitor, GCP Cloud Monitoring), Cost Guardrails</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header-with-button">
+                <div class="section-title">Key Projects</div>
+                <a href="https://portfolio.kalepratik.in/" target="_blank" class="portfolio-button">See details in portfolio</a>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
                     <div class="project-title">AWS → OCI Data Lake Migration</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                                   <div class="project-description">AI-first cross‑cloud migration for multinational FMCG: intelligent data discovery, automated tiered storage optimization, Oracle ADW federation with AI-powered cost optimization. Enterprise Power BI with AI features, gateway/RLS, and intelligent API automations. ~30% lower cost, 99.9% pipeline uptime.</div>
-             </div>
-                         <div class="project-item">
-                                 <div class="project-header">
+                <div class="project-description">Python‑driven S3→OCI pipelines; Glue/Airflow orchestration; Terraform‑based provisioning; 30% cost reduction and 99.9% uptime.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
                     <div class="project-title">ITVCMS Platform</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                                   <div class="project-description">AI-first training operations platform with intelligent mentor matching, automated content curation, and smart integrations for Udemy and YouTube metadata. Features AI-powered learning path recommendations and automated analytics for training effectiveness.</div>
-             </div>
+                <div class="project-description">FastAPI microservices on AWS Lambda/CloudFront; eventing with SQS/SNS; IaC with Terraform; centralized logging in CloudWatch.</div>
+            </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Oracle Analytics Server on OCI for Logistics</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
                 <div class="project-description">Upgrade journey: OBIEE 10g → OAS on OCI with hardened networking, automated deploys, RCU setup, and catalog migration for a PAN‑India logistics firm.</div>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">RAG Chatbot on OCI</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                                 <div class="project-description">AI-first multi‑lingual RAG chatbot with intelligent vector search, context-aware responses, prompt safety, and comprehensive observability. Features automated sentiment analysis, intent recognition, and continuous learning capabilities for enterprise knowledge management.</div>
+                <div class="project-description">Python RAG with vector DB; deployed via Docker on Kubernetes; observability with Prometheus/Grafana; prompt safety and guardrails.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Azure Data Engineering Patterns</div>
+                </div>
+                <div class="project-description">ADF/Synapse pipelines, Data Lake Gen2, Functions for serverless Python tasks, and monitoring via Azure Monitor with cost guardrails.</div>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Google Workspace Automations</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                                 <div class="project-description">AI-first end‑to‑end lead pipeline with intelligent lead scoring, automated segmentation, smart routing, automated follow-up scheduling, and intelligent notifications. Features AI-driven lead qualification and automated response generation for enhanced conversion rates.</div>
+                <div class="project-description">AI-first end‑to‑end lead pipeline with intelligent lead scoring, automated segmentation, smart routing, automated follow-up scheduling, and intelligent notifications with AI-driven lead qualification.</div>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Odoo Partnership Implementations</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                <div class="project-description">Partnered to implement Odoo for multiple customers. Converted business workflows into technical processes, data pipelines, and reporting.</div>
+                <div class="project-description">Partnered to implement Odoo for multiple customers, converting business workflows into technical processes, data pipelines, and reporting solutions.</div>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">OCI Data Lake for Pharma</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                                 <div class="project-description">AI-first pharmaceutical data lake with intelligent drug development lifecycle monitoring, FDA compliance automation, automated clinical trial analytics, and real-time safety monitoring. Features AI-powered drug efficacy analysis and automated regulatory reporting with Tableau Einstein AI.</div>
+                <div class="project-description">Pharmaceutical data lake on OCI with Python pipelines, governance controls, automated compliance checks, and near real‑time analytics.</div>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">dbt Enablement — BFSI (3‑week)</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                <div class="project-description">Hands‑on enablement for a large BFSI on dbt best practices: Git workflows, tests, lineage, environments, and CI.</div>
+                <div class="project-description">Hands‑on enablement for a large BFSI on dbt best practices: Git workflows, tests, lineage, environments, and CI/CD implementation.</div>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">GCP Data Warehouse for Insurance Analytics</div>
-                    <a href="https://portfolio.kalepratik.in/#projects" class="project-link">View Project</a>
                 </div>
-                                 <div class="project-description">AI-first insurance analytics platform with intelligent risk assessment, automated claims modeling, automated fraud detection, and smart customer segmentation. Features AI-powered pricing optimization, real-time risk scoring, and automated regulatory compliance with comprehensive testing framework.</div>
-            </div>
-            <!-- Hidden project: Redshift ELT with dbt — Modernization (BFSI) - Not started yet -->
-        </div>
-
-        <div class="section">
-            <div class="section-title">Technical Skills</div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-category-title">AI & Machine Learning</div>
-                    <ul class="skill-list">
-                        <li>LLM Integration, RAG (Retrieval-Augmented Generation), Vector Databases, AI/ML Pipelines, Natural Language Processing, Prompt Engineering, AI Model Deployment</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Cloud & Infrastructure</div>
-                    <ul class="skill-list">
-                        <li>Oracle Cloud (OCI), AWS, Azure, Linux, Docker, VPC/VCN, IAM, Kubernetes, Serverless Computing</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Data & ETL</div>
-                    <ul class="skill-list">
-                        <li>SQL, Python, Spark, ODI, OCI Data Integration, ADF, dbt, Airflow, Power Query, Data Pipeline Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Analytics & BI</div>
-                    <ul class="skill-list">
-                        <li>Power BI, Tableau, OAS/OBIEE, Oracle ADW, RAG (PoC), DAX, Semantic Models, Row‑Level Security (RLS), Gateway & Subscriptions, Paginated Reports, Performance Tuning, Storytelling & Enablement</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Applications & Development</div>
-                    <ul class="skill-list">
-                        <li>Django, FastAPI, React, REST APIs, Apps Script, Git, CI/CD, Microservices Architecture</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Data Warehouses & Databases</div>
-                    <ul class="skill-list">
-                        <li>Oracle ADW, Amazon Redshift, PostgreSQL, Vector Databases, NoSQL Databases</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Governance & Operations</div>
-                    <ul class="skill-list">
-                        <li>Semantic Models, Row‑Level Security (RLS), Gateways & Access Patterns, Data Contracts & Testing, Lineage & Monitoring, Performance & Cost Guardrails, Data Quality Management</li>
-                    </ul>
-                </div>
+                <div class="project-description">BigQuery models with dbt; Composer orchestration; Dataflow/Beam for streaming; monitoring via Cloud Monitoring; cost guardrails.</div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Education</div>
+            <div class="section-title">Education & Certifications</div>
             <div class="education-item">
-                <div class="education-degree">Bachelor of Technology in Computer Science</div>
-                <div class="education-school">JNTU Hyderabad</div>
+                <div class="education-degree">Bachelor's Degree | Computer Science</div>
+                <div class="education-school">OCI Geni AI Professional (Oracle) • Certified dbt Developer (dbt Labs) • dbt Advocate (dbt Labs) • Business Analytics (LUDIFU)</div>
             </div>
         </div>
 

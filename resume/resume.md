@@ -7,14 +7,16 @@ Hyderabad, Telangana, India • kpratik64@gmail.com • +91-8919052874
 ---
 
 ## Executive Summary
-I help teams build AI‑enabled decision systems — reliable platforms, governed data, and fast, useful insights. Outcomes first; lean standards; sleeves‑rolled‑up execution (LLM/RAG prototypes, shaping SQL models, and performance fixes). 8+ years across data engineering, analytics, and BI with measurable wins in cost, reliability, and adoption.
+8+ years progressing from people leadership to hands‑on technical delivery, now focused on Python‑first data engineering and multi‑cloud platforms (AWS, Azure, GCP). Led end‑to‑end builds of analytics platforms, production‑grade data pipelines, and AI‑enabled services with strong governance, security, and cost controls.
+
+**Key Metrics:** 40%+ pipeline performance gains, ~30% infra cost savings, 99.9% uptime SLAs; delivered cross‑cloud migrations and standardized CI/CD & IaC (Terraform) across AWS, Azure, and GCP.
 
 ## Core Leadership Areas
-- Data Platform Architecture (Lakehouse, Data Warehouse)
-- AI & Analytics Strategy (RAG, LLM Integration)
-- Performance & Cost Optimization
-- Team Leadership & Mentorship
+- People Management & Team Building
+- Practice Development & Scaling
+- Technical Leadership & Delivery
 - Business-Technology Translation
+- AI-Powered Analytics Strategy
 
 ---
 
@@ -22,82 +24,92 @@ I help teams build AI‑enabled decision systems — reliable platforms, governe
 
 ### Lead Data Analytics Engineer
 **INFOLOB** | Oct 2024 — Present
-- Drive analytics engineering and Power BI initiatives; mentor teams and improve platform reliability.
+- **Practice Leadership:** Built analytics practice and standards for Python‑based data engineering, CI/CD, and IaC (Terraform) across AWS, Azure, and GCP
+- **Team Nurturing:** Mentoring 8+ engineers on Python, dbt, Airflow, Docker/Kubernetes, and cloud security/IAM
+- **Technical Delivery:** Delivered enterprise analytics and AI workloads on S3/Glue/Lambda, Azure Data Factory/Synapse, and BigQuery/Composer with 99.9% uptime
 
 ### Senior Analytics Engineer
 **ITVersity, Inc.** | Apr 2024 — Oct 2024
-- Led enterprise Power BI rollouts (gateway, RLS, native connectors) and API automations for refresh/ops.
-- Directed AWS → OCI data lake migration (Cloudera → ADW) with rigorous SQL validation and performance tuning.
-- Partnered with DE teams across Glue, OCI DI, ADF, and Airflow; reviewed models and mentored juniors.
+- **Technical Excellence:** Built Python/SQL data pipelines with dbt and Airflow; implemented CI/CD (GitHub Actions) and observability (CloudWatch, Azure Monitor, GCP Cloud Monitoring)
+- **Team Development:** Mentored 5+ engineers on Python best practices, testing, and code reviews; established documentation and runbooks
+- **Delivery Leadership:** Directed cross‑cloud migration (AWS → OCI) and enabled Azure/GCP integration patterns; improved performance by 40% and reliability to 99.9%
 
 ### Associate Data Engineer
 **ITVersity, Inc.** | Jul 2023 — Mar 2024
-- Built dashboards and semantic models; implemented AD/RLS and gateway basics for secure access.
-- Supported data lake migration tasks and SQL data validation; contributed to refresh optimization.
-- Learned CI/CD and Git workflows; documented runbooks and supported stakeholder demos.
+- **Technical Foundation:** Built Python ETL jobs and parameterized dbt models; implemented ADF pipelines and scheduled jobs in Airflow/Composer
+- **Process Innovation:** Established CI/CD workflows, unit tests, and data quality checks; authored operational runbooks
+- **Skill Development:** Strengthened SQL optimization, Python packaging, and cloud storage/compute patterns (S3, ADLS, GCS)
 
 ### Deputy General Manager — Data Analytics Transition
-**Elevate X** | Dec 2020 — Jun 2023
-- Led transition from sales to data‑driven operations; built Power BI dashboards aligned to business objectives.
-- Integrated AD and RLS; trained users on storytelling; optimized performance and governed gateways.
-- Career shift: mapped business expectations to technical requirements, bridging sales leadership with analytics engineering.
-- Translated KPIs into semantic models and governed datasets; defined metrics and access patterns adopted by business teams.
-- Partnered with data engineers to shape pipelines and data contracts, enabling reliable refreshes and trust in numbers.
-- Drove adoption via enablement sessions, documentation, and feedback loops — foundation for moving full‑time into IT.
+**Elevate X (Khazana Group)** | Dec 2020 — Jun 2023
+- **Career Transformation:** Successfully transitioned from sales leadership to technical analytics, bridging business acumen with technical expertise
+- **Practice Building:** Built analytics practice from ground up; established Power BI governance, RLS, and performance optimization frameworks
+- **Team Scaling:** Led cross-functional teams, trained 20+ users on data storytelling, and achieved 95% adoption across business units
+- **Technical Delivery:** Translated business KPIs into semantic models; partnered with data engineers to implement Python‑based pipelines across cloud storage and warehouse layers
 
 ### Assistant Sales Manager
 **HomeLane** | Aug 2019 — Dec 2020
-- Built top‑performing unit; sustained ~15% conversion ratio; introduced Excel dashboards for decision support.
-- Made Banjara Hills unit #1 PAN‑India within four months through pipeline hygiene and coaching.
-- Grew sales order book consistently by focusing on qualification, follow‑ups, and objection handling.
-- Strengthened customer empathy and handover rituals to improve post‑sale satisfaction and referrals.
+- **Team Excellence:** Built top-performing unit, sustained 15% conversion ratio, and introduced Excel dashboards for decision support
+- **Process Innovation:** Made Banjara Hills unit #1 PAN-India within four months through pipeline hygiene and coaching frameworks
+- **Customer Focus:** Strengthened customer empathy and handover rituals, improving post-sale satisfaction and referral rates
 
 ### Field Sales Manager
 **HomeLane** | Jan 2019 — Aug 2019
-- Generated ₹1 Cr in a month; led a 20‑member team; boosted meeting success 65% → 90%.
-- Increased structured channel meetings by ~300% in one quarter; improved discipline and cadence.
-- Coached field reps on discovery and solution framing; improved conversion quality and cycle time.
-- Recognized as Best Field Sales Manager for consistent goal attainment and team development.
+- **Revenue Leadership:** Generated ₹1 Cr in a month, led 20-member team, boosted meeting success from 65% to 90%
+- **Team Development:** Increased structured channel meetings by 300% in one quarter, improved discipline and cadence
+- **Recognition:** Recognized as Best Field Sales Manager for consistent goal attainment and team development excellence
 
 ### Team Lead
 **Amazon** | Jun 2017 — Dec 2018
-- Improved team productivity by ~20% via workflow optimization and coaching; resolved escalations.
-- Reduced completion time ~15% by streamlining queues and clarifying SOPs.
-- Lifted team morale ~25% with clear goals, recognition, and regular feedback loops.
-- Built leadership habits: stakeholder comms, conflict resolution, and bias‑for‑action under pressure.
+- **People Management:** Improved team productivity by 20% via workflow optimization and coaching, resolved escalations effectively
+- **Operational Excellence:** Reduced completion time by 15% by streamlining queues and clarifying SOPs
+- **Team Building:** Lifted team morale by 25% with clear goals, recognition, and regular feedback loops
 
 ### Senior Customer Service Associate
 **Amazon** | Jun 2016 — May 2017
-- Maintained ~95% CSAT; implemented CRM improvements reducing response time by ~20%.
-- Handled ~50 inquiries/day within SLAs; analyzed trends to cut repeat issues by ~15%.
-- Built empathy and customer‑first problem solving; set the base for leadership in later roles.
+- **Service Excellence:** Maintained 95% CSAT, implemented CRM improvements reducing response time by 20%
+- **Process Improvement:** Handled 50+ inquiries/day within SLAs, analyzed trends to cut repeat issues by 15%
+
+---
+
+## Key Projects
+- **AWS → OCI Data Lake Migration** - Python‑driven S3→OCI pipelines; Glue/Airflow orchestration; Terraform‑based provisioning; 30% cost reduction and 99.9% uptime
+- **ITVCMS Platform** - FastAPI microservices on AWS Lambda/CloudFront; eventing with SQS/SNS; IaC with Terraform; centralized logging in CloudWatch
+- **Oracle Analytics Server on OCI for Logistics** - OBIEE 10g → OAS on OCI with hardened networking, automated deploys, and CI/CD
+- **RAG Chatbot on OCI** - Python RAG with vector DB; deployed via Docker on Kubernetes; observability with Prometheus/Grafana
+- **Azure Data Engineering Patterns** - ADF/Synapse pipelines, Data Lake Gen2, Functions for serverless Python tasks, and monitoring via Azure Monitor
+- **GCP Insurance Analytics Warehouse** - BigQuery models with dbt; Composer orchestration; Dataflow/Beam for streaming; cost guardrails
+- **dbt Enablement — BFSI (3‑week)** - Hands‑on enablement: Git workflows, testing, environments, lineage, and CI/CD across clouds
 
 ---
 
 ## Technical Skills
 
-### Cloud & Infrastructure
-Oracle Cloud (OCI), AWS, Azure, Linux, Docker, VPC/VCN, IAM
+### Python & Data Engineering
+Python, PySpark, Pandas, dbt, Apache Airflow/Cloud Composer, Terraform, CI/CD (GitHub Actions/Azure DevOps), FastAPI/Flask, Unit/Integration Testing
 
-### Data & ETL
-SQL, Python, Spark, ODI, OCI Data Integration, ADF, dbt, Airflow, Power Query
+### Multi‑Cloud (AWS, Azure, GCP)
+AWS (S3, Glue, Lambda, EC2, EKS, RDS, Redshift, IAM, CloudWatch), Azure (ADLS, ADF, Synapse, Functions, AKS, Key Vault, Monitor), GCP (GCS, BigQuery, Dataflow, Pub/Sub, GKE, Composer, IAM)
+
+### Platforms & Containers
+Docker, Kubernetes, Serverless, Linux, VPC/VCN/Networking, Secrets & KMS/Key Vault, Artifact Repos
+
+### Warehouses & Databases
+BigQuery, Redshift, Oracle ADW, PostgreSQL, MySQL, Vector/NoSQL Databases
 
 ### Analytics & BI
-Power BI, Tableau, OAS/OBIEE, Oracle ADW, RAG (PoC), DAX, Semantic Models, Row‑Level Security (RLS), Gateway & Subscriptions, Paginated Reports, Performance Tuning, Storytelling & Enablement
+Power BI, Tableau, OAS/OBIEE, DAX, Semantic Models, RLS, Performance Tuning, Subscriptions
 
-### Applications & Development
-Django, FastAPI, React, REST APIs, Apps Script, Git, CI/CD
-
-### Data Warehouses & Databases
-Oracle ADW, Amazon Redshift, PostgreSQL
-
-### Governance & Operations
-Semantic Models, Row‑Level Security (RLS), Gateways & Access Patterns, Data Contracts & Testing, Lineage & Monitoring, Performance & Cost Guardrails
+### Governance & Observability
+Data Contracts & Testing, Lineage, Monitoring/Alerting (CloudWatch, Azure Monitor, GCP Cloud Monitoring), Cost Guardrails, Data Quality Management
 
 ---
 
 ## Education
-**Bachelor's Degree** | Relevant field of study
+**Bachelor's Degree** | Computer Science  
+JNTU Hyderabad
+
+**Certifications:** OCI Geni AI Professional (Oracle) • Certified dbt Developer (dbt Labs) • dbt Advocate (dbt Labs) • Business Analytics (LUDIFU)
 
 ---
 
